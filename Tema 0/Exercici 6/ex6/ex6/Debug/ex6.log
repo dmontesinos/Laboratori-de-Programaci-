@@ -1,0 +1,4 @@
+﻿  Comanda.cpp
+c:\users\danib\desktop\exercici 6\ex6\ex6\comanda.cpp(1): warning C4067: símbolos (token) inesperados después de la directiva del preprocesador; se esperaba una nueva línea
+c:\users\danib\desktop\exercici 6\ex6\ex6\comanda.cpp(135): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+  ex6.vcxproj -> C:\Users\danib\Desktop\Exercici 6\ex6\Debug\ex6.exe
