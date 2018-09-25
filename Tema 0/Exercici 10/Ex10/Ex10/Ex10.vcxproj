@@ -117,7 +117,9 @@
   <ItemGroup>
     <ClCompile Include="Comanda.cpp" />
     <ClCompile Include="Data.cpp" />
+    <ClCompile Include="Empresa.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Producte.cpp" />
     <ClCompile Include="ProducteComanda.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -126,6 +128,12 @@
     <ClInclude Include="Empresa.h" />
     <ClInclude Include="Producte.h" />
     <ClInclude Include="ProducteComanda.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="comanda_1.txt" />
+    <Text Include="comanda_2.txt" />
+    <Text Include="comanda_3.txt" />
+    <Text Include="productes.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

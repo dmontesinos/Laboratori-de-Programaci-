@@ -27,6 +27,12 @@
     <ClCompile Include="ProducteComanda.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
+    <ClCompile Include="Producte.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="Empresa.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Comanda.h">
@@ -44,5 +50,19 @@
     <ClInclude Include="ProducteComanda.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="comanda_1.txt">
+      <Filter>Archivos de recursos</Filter>
+    </Text>
+    <Text Include="comanda_2.txt">
+      <Filter>Archivos de recursos</Filter>
+    </Text>
+    <Text Include="comanda_3.txt">
+      <Filter>Archivos de recursos</Filter>
+    </Text>
+    <Text Include="productes.txt">
+      <Filter>Archivos de recursos</Filter>
+    </Text>
   </ItemGroup>
 </Project>
