@@ -103,15 +103,6 @@ Data Comanda::getData() const
 	return m_data;
 }
 
-/*float Comanda::getImport() const
-{
-	float importTotal = 0;
-	for (int i = 0; i < m_producteLlistat; i++)
-	{
-		importTotal += m_prodDades[i].getPreu();
-	}
-	return importTotal;
-}*/
 
 float Comanda::getImport() const
 {
