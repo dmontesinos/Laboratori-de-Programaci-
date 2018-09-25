@@ -15,15 +15,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\..\..\..\danimontesinos1%40gmail.com\UAB\SeguntoT\Laboratori de Programació\Problemes\Tema 0\Exercici 2\Exercici 2\Data.h">
+    <ClInclude Include="Data.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\..\..\..\danimontesinos1%40gmail.com\UAB\SeguntoT\Laboratori de Programació\Problemes\Tema 0\Exercici 2\Exercici 2\Data.cpp">
+    <ClCompile Include="Data.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\..\..\danimontesinos1%40gmail.com\UAB\SeguntoT\Laboratori de Programació\Problemes\Tema 0\Exercici 2\Exercici 2\main.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>

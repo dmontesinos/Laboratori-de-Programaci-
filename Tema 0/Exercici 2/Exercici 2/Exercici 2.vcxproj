@@ -18,6 +18,13 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Data.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Data.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{297287DB-3169-4DBA-8FE0-15717DC832F2}</ProjectGuid>
@@ -114,13 +121,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\..\..\..\danimontesinos1%40gmail.com\UAB\SeguntoT\Laboratori de Programació\Problemes\Tema 0\Exercici 2\Exercici 2\Data.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\..\..\..\danimontesinos1%40gmail.com\UAB\SeguntoT\Laboratori de Programació\Problemes\Tema 0\Exercici 2\Exercici 2\Data.cpp" />
-    <ClCompile Include="..\..\..\..\..\..\..\..\danimontesinos1%40gmail.com\UAB\SeguntoT\Laboratori de Programació\Problemes\Tema 0\Exercici 2\Exercici 2\main.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
