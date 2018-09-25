@@ -1,4 +1,6 @@
 #pragma once
+#include <string>
+using namespace std;
 
 class Data
 {
@@ -12,10 +14,11 @@ public:
 	~Data();
 	Data(int dia, int mes, int any);
 	Data(const Data& c);
+
+
 	Data operator+(const int dias);
 	bool operator==(const Data fecha);
 	bool operator<(const Data fecha);
-
 
 
 	int getDia() const;
@@ -27,4 +30,5 @@ public:
 	void setAny(int any);
 
 	bool dataValida();
+	Data string2date(string data) const;
 };

@@ -25,6 +25,22 @@ Data::Data(const Data& c)
 	m_any = c.m_any;
 }
 
+Data Data::string2date(string data) const
+{
+	Data convData;
+
+	std::string dia = data.substr(0, 2);
+	std::string mes = data.substr(2, 2);
+	std::string any = data.substr(5, 4);
+
+	convData.setDia(std::stoi(dia));
+	convData.setMes(std::stoi(mes));
+	convData.setAny(std::stoi(any));
+	
+	return convData;
+}
+	
+
 void Data::setDia(int dia)
 {
 	m_dia = dia;

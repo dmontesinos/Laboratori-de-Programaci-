@@ -47,6 +47,7 @@ bool Empresa::afegeixComanda(const string & nomFitxer)
 
 	Comanda comanda;
 	string nomClient;
+	string dataString;
 	Data data;
 	int nUnitatsCom;
 	string nomProducte;
@@ -56,15 +57,21 @@ bool Empresa::afegeixComanda(const string & nomFitxer)
 
 	if (fitxer.is_open())
 	{
+		fitxer >> nomClient;
+		comanda.setClient(nomClient);
+
+		fitxer >> dataString;
+		data.string2date(dataString);
+		comanda.setData(data);
+		
+		fitxer >> nUnitatsCom;
+		comanda.setNumProd(nUnitatsCom);
+
 		while (!fitxer.eof() && m_ultimCom != m_llistaComandes.end())
 		{
-			fitxer >> nomClient;
-			//fitxer >> data;
-			fitxer >> nUnitatsCom;
+			comanda.setClient(nomClient);
+			comanda.setImport()
 
-			producte.setNom(nom);
-			producte.setCodi(codi);
-			producte.setPreu(preu);
 			m_llistaProductes.insert_after(m_ultimProd, producte);
 			m_ultimProd++;
 		}
