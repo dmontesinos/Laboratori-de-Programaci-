@@ -119,6 +119,7 @@
     <ClCompile Include="Data.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="ProducteComanda.cpp" />
+    <ClCompile Include="Prueba.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Comanda.h" />
