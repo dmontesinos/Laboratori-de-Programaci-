@@ -27,7 +27,7 @@ public:
 	Data getData() const;
 	float getImport() const;
 
-	bool afegeixProducte(string codi,int unitats,int pUnitat);
+	bool afegeixProducte(string codi,int unitats,float pUnitat);
 	bool consultaProducte(const string codi, int &unitats,float &preu);
 
 private:

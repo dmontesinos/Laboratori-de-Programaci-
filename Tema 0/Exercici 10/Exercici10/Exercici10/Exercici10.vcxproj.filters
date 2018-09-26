@@ -21,16 +21,16 @@
     <ClCompile Include="Data.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="Empresa.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="ProducteComanda.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="Producte.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="Empresa.cpp">
+    <ClCompile Include="ProducteComanda.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>

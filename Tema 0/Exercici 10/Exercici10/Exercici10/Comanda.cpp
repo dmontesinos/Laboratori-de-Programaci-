@@ -121,6 +121,7 @@ bool Comanda::afegeixProducte(string codi, int unitats, int pUnitat)
 	bool afegit = false;
 	if (m_producteLlistat < m_nProd)
 	{
+		m_prodDades = new ProducteComanda[m_nProd];
 		m_prodDades[m_producteLlistat].setCodi(codi);
 		m_prodDades[m_producteLlistat].setUnitats(unitats);
 		m_prodDades[m_producteLlistat].setPreu(pUnitat);

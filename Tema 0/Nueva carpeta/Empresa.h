@@ -11,10 +11,11 @@ public:
 
 	void llegeixProductes(const string& nomFitxer);
 	bool afegeixComanda(const string& nomFitxer);
+	bool buscarProducte(const string producte, float &preu, string &codi);
+	bool importComanda(const string& nomClient,const Data& data, float &import);
+	bool DetallProducteComanda(const string& nomClient, const Data& data, const string& codiProducte, int& nUnitats, float& preu);
 
 private:
 	std::forward_list<Comanda> m_llistaComandes;
-	std::forward_list<Comanda>::iterator m_ultimCom = m_llistaComandes.begin();
 	std::forward_list<Producte> m_llistaProductes;
-	std::forward_list<Producte>::iterator m_ultimProd = m_llistaProductes.begin();
 };

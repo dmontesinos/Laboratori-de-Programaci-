@@ -29,17 +29,17 @@ void Producte::setPreu(float preu)
 	m_preu = preu;
 }
 
-string Producte::getNom(string nom) const
+string Producte::getNom() const
 {
 	return m_nom;
 }
 
-string Producte::getCodi(string codi) const
+string Producte::getCodi() const
 {
 	return m_codi;
 }
 
-float Producte::getPreu(float preu) const
+float Producte::getPreu() const
 {
 	return m_preu;
 }

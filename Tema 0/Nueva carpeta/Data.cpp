@@ -30,8 +30,8 @@ Data Data::string2date(string data) const
 	Data convData;
 
 	std::string dia = data.substr(0, 2);
-	std::string mes = data.substr(2, 2);
-	std::string any = data.substr(5, 4);
+	std::string mes = data.substr(3, 2);
+	std::string any = data.substr(6, 4);
 
 	convData.setDia(std::stoi(dia));
 	convData.setMes(std::stoi(mes));

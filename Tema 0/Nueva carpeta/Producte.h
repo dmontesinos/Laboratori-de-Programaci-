@@ -12,9 +12,9 @@ public:
 	void setCodi(string codi);
 	void setPreu(float preu);
 
-	string getNom(string nom) const;
-	string getCodi(string codi) const;
-	float getPreu(float preu) const;
+	string getNom() const;
+	string getCodi() const;
+	float getPreu() const;
 
 private:
 	string m_nom;
