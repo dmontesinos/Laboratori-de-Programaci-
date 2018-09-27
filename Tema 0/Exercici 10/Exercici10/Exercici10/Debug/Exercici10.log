@@ -1,4 +1,3 @@
-﻿  Comanda.cpp
-c:\users\danib\desktop\laboratori de programació\tema 0\exercici 10\exercici10\exercici10\comanda.cpp(1): warning C4067: símbolos (token) inesperados después de la directiva del preprocesador; se esperaba una nueva línea
-c:\users\danib\desktop\laboratori de programació\tema 0\exercici 10\exercici10\exercici10\comanda.cpp(127): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+﻿  Empresa.cpp
+c:\users\danib\desktop\laboratori de programació\tema 0\exercici 10\exercici10\exercici10\empresa.cpp(83): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
   Exercici10.vcxproj -> C:\Users\danib\Desktop\Laboratori de Programació\Tema 0\Exercici 10\Exercici10\Debug\Exercici10.exe

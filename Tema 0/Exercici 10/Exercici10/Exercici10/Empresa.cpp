@@ -52,6 +52,7 @@ bool Empresa::afegeixComanda(const string & nomFitxer)
 	string codi;
 	float preu;
 
+	int contador = 0;
 	bool valid = false;
 	string nomProducte;
 	int nUnitats;
@@ -78,9 +79,14 @@ bool Empresa::afegeixComanda(const string & nomFitxer)
 
 				if (buscarProducte(nomProducte, preu, codi))
 				{
+					contador++;
 					comanda.afegeixProducte(codi, nUnitats, preu);
 					m_llistaComandes.push_front(comanda);
 					valid = true;
+				}
+				else {
+					valid = false;
+					m_llistaComandes.pop_front();
 				}
 			}
 		}
@@ -106,12 +112,39 @@ bool Empresa::buscarProducte(const string producte, float &preu, string &codi)
 	return valid;
 }
 
-bool Empresa::importComanda(const string& nomClient, const Data& data, float &import)
+bool Empresa::importComanda(const string& nomClient, Data& data, float &import)
 {
-	return false;
+	bool trobat = false;
+	Comanda com;
+	for (auto it = m_llistaComandes.begin(); it != m_llistaComandes.end(); it++)
+	{
+		com = *it;
+		if ((nomClient == com.getClient()) && (data == com.getData()))
+		{
+			if (trobat == false) 
+			{
+				import = com.getImport();
+				trobat = true;
+			}
+		}
+	}
+	return trobat;
 }
 
-bool Empresa::DetallProducteComanda(const string& nomClient, const Data& data, const string& codiProducte, int& nUnitats, float& preu)
+bool Empresa::DetallProducteComanda(const string& nomClient, Data& data, const string& codiProducte, int& nUnitats, float& preu)
 {
-	return false;
+	bool trobat = false;
+	Comanda com;
+	for (auto it = m_llistaComandes.begin(); it != m_llistaComandes.end(); it++)
+	{
+		com = *it;
+		if ((nomClient == com.getClient()) && (data == com.getData()))
+		{
+			if (com.consultaProducte(codiProducte, nUnitats, preu))
+			{
+				trobat = true;
+			}
+		}
+	}
+	return trobat;
 }

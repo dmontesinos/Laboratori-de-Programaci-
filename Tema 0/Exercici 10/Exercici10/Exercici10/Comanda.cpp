@@ -106,14 +106,7 @@ Data Comanda::getData() const
 
 float Comanda::getImport() const
 {
-	float importTotal = 0;
-
-	for (int i = 0; i < m_producteLlistat; i++)
-	{
-		importTotal = importTotal + (m_prodDades[i].getPreu()*m_prodDades[i].getUnitats());
-	}
-
-	return importTotal;
+	return m_impTotal;
 }
 
 bool Comanda::afegeixProducte(string codi, int unitats, int pUnitat)
@@ -125,7 +118,9 @@ bool Comanda::afegeixProducte(string codi, int unitats, int pUnitat)
 		m_prodDades[m_producteLlistat].setCodi(codi);
 		m_prodDades[m_producteLlistat].setUnitats(unitats);
 		m_prodDades[m_producteLlistat].setPreu(pUnitat);
+		m_impTotal += (unitats*pUnitat);
 		m_producteLlistat++;
+		
 		afegit = true;
 	}
 	return afegit;
