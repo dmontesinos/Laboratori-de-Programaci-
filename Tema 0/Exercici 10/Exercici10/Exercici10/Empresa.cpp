@@ -9,7 +9,8 @@ Empresa::Empresa()
 
 Empresa::~Empresa()
 {
-
+	m_llistaComandes.~forward_list();
+	m_llistaProductes.~forward_list();
 }
 
 void Empresa::llegeixProductes(const string & nomFitxer)
