@@ -20,4 +20,6 @@ public:
 	int getNColumnes() const;
 	float& operator()(int fila, int columna);
 private:
+	int m_nFiles;
+	int m_nColumnes;
 };

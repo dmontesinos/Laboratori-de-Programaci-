@@ -15,6 +15,7 @@ Empresa::~Empresa()
 
 void Empresa::llegeixProductes(const string & nomFitxer)
 {
+
 	ifstream fitxer;
 
 	Producte producte;
@@ -113,14 +114,14 @@ bool Empresa::buscarProducte(const string producte, float &preu, string &codi)
 	return valid;
 }
 
-bool Empresa::importComanda(const string& nomClient, Data& data, float &import)
+bool Empresa::importComanda(const string& nomClient, const Data& data, float &import)
 {
 	bool trobat = false;
 	Comanda com;
 	for (auto it = m_llistaComandes.begin(); it != m_llistaComandes.end(); it++)
 	{
 		com = *it;
-		if ((nomClient == com.getClient()) && (data == com.getData()))
+		if ((nomClient == com.getClient()) && (com.getData() == data))
 		{
 			if (trobat == false) 
 			{

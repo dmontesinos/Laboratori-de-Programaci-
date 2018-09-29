@@ -11,7 +11,7 @@ void mostraBool(bool logic)
 		cout << "FALSE";
 }
 
-float testDadesComanda(Empresa& e)
+float testDadesComanda(Empresa e)
 {
 	float reduccio = 0.0;
 	const int NPROVES_COMANDA = 5;

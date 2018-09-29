@@ -2,7 +2,11 @@
 
 Comanda::Comanda()
 {
-
+	m_nomClient = "";
+	m_impTotal = 0;
+	m_nProd = 0;
+	m_producteLlistat = 0;
+	m_prodDades = new ProducteComanda[m_nProd];
 }
 
 Comanda::Comanda(const Comanda& c)
