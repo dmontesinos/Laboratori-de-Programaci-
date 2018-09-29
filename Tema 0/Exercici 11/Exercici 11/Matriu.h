@@ -22,4 +22,5 @@ public:
 private:
 	int m_nFiles;
 	int m_nColumnes;
+	float **m_matriu;
 };
