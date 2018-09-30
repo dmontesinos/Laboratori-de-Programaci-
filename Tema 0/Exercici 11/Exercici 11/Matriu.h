@@ -19,6 +19,7 @@ public:
 	int getNFiles() const;
 	int getNColumnes() const;
 	float& operator()(int fila, int columna);
+	const double operator()(int fila, int columna) const;
 private:
 	int m_nFiles;
 	int m_nColumnes;
