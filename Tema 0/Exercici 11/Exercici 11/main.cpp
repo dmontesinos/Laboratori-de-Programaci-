@@ -406,6 +406,8 @@ int main()
 		cout << "Comment :=>> Final del test sense errors" << endl;
 	cout << "Grade :=>> " << grade << endl;
 
+	system("pause");
+
 	return 0;
 }
 

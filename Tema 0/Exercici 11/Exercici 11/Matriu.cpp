@@ -38,21 +38,21 @@ Matriu::Matriu(int nFiles, int nColumnes)
 
 Matriu::Matriu(const Matriu& c)
 {
-	m_nFiles = c.m_nFiles;
-	m_nColumnes = c.m_nColumnes;
+	this->m_nFiles = c.m_nFiles;
+	this->m_nColumnes = c.m_nColumnes;
 
-	m_matriu = new float*[c.m_nFiles];
+	this->m_matriu = new float*[c.m_nFiles];
 
 	for (int i = 0; i < c.m_nFiles; i++)
 	{
-		m_matriu[i] = new float[c.m_nColumnes];
+		this->m_matriu[i] = new float[c.m_nColumnes];
 	}
 
-	for (int i = 0; i < m_nFiles; i++)
+	for (int i = 0; i < this->m_nFiles; i++)
 	{
-		for (int j = 0; j < m_nColumnes; j++)
+		for (int j = 0; j < this->m_nColumnes; j++)
 		{
-			m_matriu[i][j] = c.m_matriu[i][j];
+			this->m_matriu[i][j] = c.m_matriu[i][j];
 		}
 	}
 }
@@ -60,17 +60,18 @@ Matriu::Matriu(const Matriu& c)
 Matriu& Matriu::operator=(const Matriu& c)
 {
 	Matriu matriu2(c.m_nFiles, c.m_nColumnes);
+
 	//Eliminación de la matriz original
 	for (int i = 0; i < this->m_nFiles; i++)
 		delete[] this->m_matriu[i];
 	delete[] this->m_matriu;
 
 	//Creación de la matriz con las propiedades de la que queremos copiar
-	m_matriu = new float*[c.m_nFiles];
+	this->m_matriu = new float*[c.m_nFiles];
 
 	for (int i = 0; i < c.m_nFiles; i++)
 	{
-		m_matriu[i] = new float[c.m_nColumnes];
+		this->m_matriu[i] = new float[c.m_nColumnes];
 	}
 
 	this->m_nColumnes = c.m_nColumnes;
@@ -80,7 +81,7 @@ Matriu& Matriu::operator=(const Matriu& c)
 	{
 		for (int j = 0; j < m_nColumnes; j++)
 		{
-			m_matriu[i][j] = c.m_matriu[i][j];
+			this->m_matriu[i][j] = c.m_matriu[i][j];
 		}
 	}
 	return matriu2;
