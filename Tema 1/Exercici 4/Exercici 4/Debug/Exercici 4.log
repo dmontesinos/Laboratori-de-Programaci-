@@ -1,0 +1,26 @@
+﻿  main.cpp
+c:\users\danib\desktop\laboratori de programació\tema 1\exercici 4\exercici 4\main.cpp(83): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\danib\desktop\laboratori de programació\tema 1\exercici 4\exercici 4\main.cpp(93): error C2039: 'afegeix': no es un miembro de 'Map<std::string,Persona>'
+  c:\users\danib\desktop\laboratori de programació\tema 1\exercici 4\exercici 4\main.cpp(73): note: vea la declaración de 'Map<std::string,Persona>'
+c:\users\danib\desktop\laboratori de programació\tema 1\exercici 4\exercici 4\main.cpp(112): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\danib\desktop\laboratori de programació\tema 1\exercici 4\exercici 4\main.cpp(134): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\danib\desktop\laboratori de programació\tema 1\exercici 4\exercici 4\main.cpp(162): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\danib\desktop\laboratori de programació\tema 1\exercici 4\exercici 4\main.cpp(187): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\danib\desktop\laboratori de programació\tema 1\exercici 4\exercici 4\main.cpp(193): warning C4305: 'inicializando': truncamiento de 'double' a 'float'
+c:\users\danib\desktop\laboratori de programació\tema 1\exercici 4\exercici 4\main.cpp(206): error C2039: 'afegeix': no es un miembro de 'Map<std::string,Persona>'
+  c:\users\danib\desktop\laboratori de programació\tema 1\exercici 4\exercici 4\main.cpp(73): note: vea la declaración de 'Map<std::string,Persona>'
+c:\users\danib\desktop\laboratori de programació\tema 1\exercici 4\exercici 4\main.cpp(226): error C2679: '[' binario: no se encontró un operador que adopte un operando en la parte derecha de tipo 'int' (o bien no existe una conversión aceptable)
+  c:\users\danib\desktop\laboratori de programació\tema 1\exercici 4\exercici 4\map.h(23): note: puede ser 'const TValor &Map<std::string,TValor>::operator [](const TClau &) const'
+          with
+          [
+              TValor=Persona,
+              TClau=std::string
+          ]
+  c:\users\danib\desktop\laboratori de programació\tema 1\exercici 4\exercici 4\map.h(22): note: o       'TValor &Map<std::string,TValor>::operator [](const TClau &)'
+          with
+          [
+              TValor=Persona,
+              TClau=std::string
+          ]
+  c:\users\danib\desktop\laboratori de programació\tema 1\exercici 4\exercici 4\main.cpp(226): note: al hacer coincidir la lista de argumentos '(Map<std::string,Persona>, int)'
+c:\users\danib\desktop\laboratori de programació\tema 1\exercici 4\exercici 4\main.cpp(247): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
