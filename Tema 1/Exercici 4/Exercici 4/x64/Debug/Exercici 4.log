@@ -1,0 +1,41 @@
+﻿  main.cpp
+c:\users\danib\desktop\laboratori de programació\tema 1\exercici 4\exercici 4\main.cpp(83): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\danib\desktop\laboratori de programació\tema 1\exercici 4\exercici 4\main.cpp(112): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\danib\desktop\laboratori de programació\tema 1\exercici 4\exercici 4\main.cpp(134): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\danib\desktop\laboratori de programació\tema 1\exercici 4\exercici 4\main.cpp(162): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\danib\desktop\laboratori de programació\tema 1\exercici 4\exercici 4\main.cpp(187): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\danib\desktop\laboratori de programació\tema 1\exercici 4\exercici 4\main.cpp(193): warning C4305: 'inicializando': truncamiento de 'double' a 'float'
+c:\users\danib\desktop\laboratori de programació\tema 1\exercici 4\exercici 4\main.cpp(247): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\danib\desktop\laboratori de programació\tema 1\exercici 4\exercici 4\map.h(58): warning C4267: 'return': conversión de 'size_t' a 'int'; posible pérdida de datos
+  c:\users\danib\desktop\laboratori de programació\tema 1\exercici 4\exercici 4\map.h(57): note: durante la compilación de la función miembro de plantilla clase de 'int Map<std::string,Persona>::longitud(void) const'
+  c:\users\danib\desktop\laboratori de programació\tema 1\exercici 4\exercici 4\main.cpp(75): note: vea la referencia a la creación de instancias de plantilla de función 'int Map<std::string,Persona>::longitud(void) const' que se está compilando
+  c:\users\danib\desktop\laboratori de programació\tema 1\exercici 4\exercici 4\main.cpp(73): note: vea la referencia a la creación de instancias de plantilla clase de 'Map<std::string,Persona>' que se está compilando
+c:\users\danib\desktop\laboratori de programació\tema 1\exercici 4\exercici 4\map.h(90): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+  c:\users\danib\desktop\laboratori de programació\tema 1\exercici 4\exercici 4\map.h(70): note: durante la compilación de la función miembro de plantilla clase de 'TValor &Map<std::string,TValor>::operator [](const TClau &)'
+          with
+          [
+              TValor=Persona,
+              TClau=std::string
+          ]
+  c:\users\danib\desktop\laboratori de programació\tema 1\exercici 4\exercici 4\main.cpp(123): note: vea la referencia a la creación de instancias de plantilla de función 'TValor &Map<std::string,TValor>::operator [](const TClau &)' que se está compilando
+          with
+          [
+              TValor=Persona,
+              TClau=std::string
+          ]
+c:\users\danib\desktop\laboratori de programació\tema 1\exercici 4\exercici 4\map.h(133): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+  c:\users\danib\desktop\laboratori de programació\tema 1\exercici 4\exercici 4\map.h(120): note: durante la compilación de la función miembro de plantilla clase de 'const TValor &Map<std::string,TValor>::operator [](const TClau &) const'
+          with
+          [
+              TValor=Persona,
+              TClau=std::string
+          ]
+  c:\users\danib\desktop\laboratori de programació\tema 1\exercici 4\exercici 4\main.cpp(27): note: vea la referencia a la creación de instancias de plantilla de función 'const TValor &Map<std::string,TValor>::operator [](const TClau &) const' que se está compilando
+          with
+          [
+              TValor=Persona,
+              TClau=std::string
+          ]
+  c:\users\danib\desktop\laboratori de programació\tema 1\exercici 4\exercici 4\map.h(43): note: durante la compilación de la función miembro de plantilla clase de 'Map<std::string,Persona>::Map(void)'
+  c:\users\danib\desktop\laboratori de programació\tema 1\exercici 4\exercici 4\main.cpp(73): note: vea la referencia a la creación de instancias de plantilla de función 'Map<std::string,Persona>::Map(void)' que se está compilando
+  Exercici 4.vcxproj -> C:\Users\danib\Desktop\Laboratori de Programació\Tema 1\Exercici 4\x64\Debug\Exercici 4.exe

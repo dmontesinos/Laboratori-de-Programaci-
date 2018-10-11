@@ -14,6 +14,9 @@ public:
 	void setNom(const string& nom) { m_nom = nom; }
 	void setEdat(int edat) { m_edat = edat;  }
 	friend ostream& operator<<(ostream &out, const Persona& p);
+	bool operator==(const Persona &p) const;
+	bool operator>(Persona &p);
+	Persona operator=(Persona &p);
 private:
 	string m_nom;
 	int m_edat;

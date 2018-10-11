@@ -259,5 +259,4 @@ int main()
 	cout << endl << "Grade :=>> " << grade << endl;
 
 	return 0;
-	return 0;
 }

@@ -27,7 +27,7 @@ public:
 
 	void afegeix(const TClau& clau, const TValor& valor);
 
-	Map(const Map& c);
+	//Map(const Map& c);
 
 	Map<TClau, TValor>& operator=(const Map< TClau, TValor>& m);
 
@@ -35,12 +35,15 @@ public:
 
 private:
 	std::vector< std::pair<TClau,TValor> > m_vector;
+	std::vector< std::pair<TClau,TValor> > m_vector2;
 };
 
 template<class TClau, class TValor>
 Map<TClau, TValor>::Map()
 {
-	//m_vector.push_back(make_pair(NULL, NULL));
+	TClau clau;
+	TValor valor;
+	m_vector2.push_back(make_pair(clau, valor));
 }
 
 template<class TClau, class TValor>
@@ -65,15 +68,49 @@ bool Map<TClau, TValor>::esBuit() const
 template<class TClau, class TValor>
 TValor & Map<TClau, TValor>::operator[](const TClau & clau)
 {
-	for (auto it = m_vector.begin(); it != m_vector.end(); it++)
+	/*bool trobat = false;
+	auto it = m_vector.begin();
+	for (it = m_vector.begin(); it != m_vector.end() && !trobat; it++)
 	{
 		if (it->first == clau)
 		{
-			clau = it->second;
+			trobat = true;
+		}
+	}
+	if (!trobat) {
+		return m_vector2
+	}
+	else {
+		return it->second;
+
+	}*/
+
+	bool interruptor = false;
+	int L = 0;
+	int R = m_vector.size() - 1;
+	int m = 0;
+	while (L <= R && !interruptor)
+	{
+		m = ((L + R) / 2);
+		if (m_vector[m].first < clau)
+		{
+			L = m + 1;
+
+		}
+		else if (m_vector[m].first > clau)
+		{
+			R = m - 1;
 		}
 		else {
-			clau = NULL;
+			interruptor = true;
 		}
+	}
+	if (interruptor == false)
+	{
+		return m_vector2[0].second;
+	}
+	else {
+		return m_vector[m].second;
 	}
 }
 
@@ -81,46 +118,76 @@ TValor & Map<TClau, TValor>::operator[](const TClau & clau)
 template<class TClau, class TValor>
 const TValor& Map<TClau, TValor>::operator[](const TClau& clau) const 
 {
-	for (auto it = m_vector.begin(); it != m_vector.end(); it++)
+	/*bool trobat = false;
+	auto it = m_vector.begin();
+	for (it = m_vector.begin(); it != m_vector.end() && !trobat; it++)
 	{
 		if (it->first == clau)
 		{
-			clau = it->second;
+			trobat = true;
+		}
+	}
+	return it->second;*/
+	bool interruptor = false;
+	int L = 0;
+	int R = m_vector.size() - 1;
+	int m = 0;
+	while (L <= R && !interruptor)
+	{
+		m = ((L + R) / 2);
+		if (m_vector[m].first < clau)
+		{
+			L = m + 1;
+
+		}
+		else if (m_vector[m].first > clau)
+		{
+			R = m - 1;
 		}
 		else {
-			clau = NULL;
+			interruptor = true;
 		}
+	}
+	if (interruptor == false)
+	{
+		return m_vector2[0].second;
+	}
+	else {
+		return m_vector[m].second;
 	}
 }
 
 template<class TClau, class TValor>
 TClau& Map<TClau, TValor>::operator[](const int& posicio) 
 {
-	if ((posicio < longitud()) && (posicio >= 0))
+	/*if ((posicio < longitud()) && (posicio >= 0))
 	{
 		posicio = m_vector[posicio].first;
 	}
 	else {
 		posicio = NULL;
-	}
+	}*/
+	return m_vector[posicio].first;
 }
 
 template<class TClau, class TValor>
 const TClau& Map<TClau, TValor>::operator[](const int& posicio) const 
 {
-	if ((posicio < longitud()) && (posicio >= 0))
+	/*if ((posicio < longitud()) && (posicio >= 0))
 	{
 		posicio = m_vector[posicio].first;
 	}
 	else {
 		posicio = NULL;
-	}
+	}*/
+	return m_vector[posicio].first;
+
 }
 
 template<class TClau, class TValor>
 void Map<TClau, TValor>::afegeix(const TClau& clau, const TValor& valor)
 {
-	bool trobat = false;
+	/*bool trobat = false;
 
 	for (auto it = m_vector.begin(); it != m_vector.end(); it++)
 	{
@@ -135,17 +202,21 @@ void Map<TClau, TValor>::afegeix(const TClau& clau, const TValor& valor)
 	if (trobat == false)
 		m_vector.push_back(make_pair(clau, valor));
 
-	sort(m_vector.begin(), m_vector.end());
+	sort(m_vector.begin(), m_vector.end());*/
+	m_vector.push_back(make_pair(clau, valor));
+	//sort(m_vector.begin(), m_vector.end());
 }
 
-template <class TClau, class TValor>
+/*template <class TClau, class TValor>
 Map<TClau,TValor>::Map(const Map& c)
 {
-	this->m_vector = c.m_vector;
-}
+	m_vector = c.m_vector;
+	return *this;
+}*/
 
 template<class TClau, class TValor>
 Map<TClau, TValor>& Map<TClau, TValor>::operator=(const Map<TClau, TValor>& m)
 {
-	this->m_vector = m.m_vector;
+	m_vector = m.m_vector;
+	return *this;
 }
