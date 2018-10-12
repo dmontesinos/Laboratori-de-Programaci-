@@ -51,6 +51,10 @@ int main()
 
 	cout << "Comment :=>> Comprovant constructor copia ....................... " << endl;
 	SmartPointer<Persona> sp3 = sp1;
+	if (sp1.isNull())
+	{
+		cout << "Es null";
+	}
 	if (((*sp3).getNom() != "A") || (!sp1.isNull()))
 	{
 		valid = false;

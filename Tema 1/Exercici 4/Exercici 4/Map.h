@@ -27,11 +27,7 @@ public:
 
 	void afegeix(const TClau& clau, const TValor& valor);
 
-	//Map(const Map& c);
-
 	Map<TClau, TValor>& operator=(const Map< TClau, TValor>& m);
-
-	//bool Map<TClau, TValor>& operator==(const Map<TClau,TValor>& m);
 
 private:
 	std::vector< std::pair<TClau,TValor> > m_vector;
@@ -69,49 +65,37 @@ template<class TClau, class TValor>
 TValor & Map<TClau, TValor>::operator[](const TClau & clau)
 {
 	/*bool trobat = false;
-	auto it = m_vector.begin();
-	for (it = m_vector.begin(); it != m_vector.end() && !trobat; it++)
+	for (auto it = m_vector.begin(); it != m_vector.end() && !trobat; it++)
 	{
 		if (it->first == clau)
 		{
+			return it->second;
 			trobat = true;
 		}
-	}
-	if (!trobat) {
-		return m_vector2
-	}
-	else {
-		return it->second;
-
 	}*/
 
-	bool interruptor = false;
-	int L = 0;
-	int R = m_vector.size() - 1;
-	int m = 0;
-	while (L <= R && !interruptor)
-	{
-		m = ((L + R) / 2);
-		if (m_vector[m].first < clau)
-		{
-			L = m + 1;
+	bool bypass = false;
+	int left = 0;
+	int right = m_vector.size() - 1;
 
-		}
-		else if (m_vector[m].first > clau)
-		{
-			R = m - 1;
-		}
-		else {
-			interruptor = true;
-		}
-	}
-	if (interruptor == false)
+	int cont = 0;
+	while (left <= right && !bypass)
 	{
+		cont = ((left + right) / 2);
+
+		if (m_vector[cont].first < clau)
+			left = cont + 1;
+
+		else if (m_vector[cont].first > clau)
+			right = cont - 1;
+
+		else
+			bypass = true;
+	}
+	if (bypass == false)
 		return m_vector2[0].second;
-	}
-	else {
-		return m_vector[m].second;
-	}
+	else
+		return m_vector[cont].second;
 }
 
 
@@ -119,100 +103,85 @@ template<class TClau, class TValor>
 const TValor& Map<TClau, TValor>::operator[](const TClau& clau) const 
 {
 	/*bool trobat = false;
-	auto it = m_vector.begin();
-	for (it = m_vector.begin(); it != m_vector.end() && !trobat; it++)
+	for (auto it = m_vector.begin(); it != m_vector.end() && !trobat; it++)
 	{
 		if (it->first == clau)
 		{
+			return it->second;
 			trobat = true;
 		}
-	}
-	return it->second;*/
-	bool interruptor = false;
-	int L = 0;
-	int R = m_vector.size() - 1;
-	int m = 0;
-	while (L <= R && !interruptor)
-	{
-		m = ((L + R) / 2);
-		if (m_vector[m].first < clau)
-		{
-			L = m + 1;
+	}*/
 
-		}
-		else if (m_vector[m].first > clau)
-		{
-			R = m - 1;
-		}
-		else {
-			interruptor = true;
-		}
-	}
-	if (interruptor == false)
+
+	bool bypass = false;
+	int left = 0;
+	int right = m_vector.size() - 1;
+
+	int cont = 0;
+	while (left <= right && !bypass)
 	{
+		cont = ((left + right) / 2);
+
+		if (m_vector[cont].first < clau)
+			left = cont + 1;
+
+		else if (m_vector[cont].first > clau)
+			right = cont - 1;
+
+		else
+			bypass = true;
+	}
+	if (bypass == false)
 		return m_vector2[0].second;
-	}
-	else {
-		return m_vector[m].second;
-	}
+	else
+		return m_vector[cont].second;
 }
 
 template<class TClau, class TValor>
 TClau& Map<TClau, TValor>::operator[](const int& posicio) 
 {
-	/*if ((posicio < longitud()) && (posicio >= 0))
-	{
-		posicio = m_vector[posicio].first;
-	}
-	else {
-		posicio = NULL;
-	}*/
-	return m_vector[posicio].first;
+	if ((posicio < longitud()) && (posicio >= 0))
+		return m_vector[posicio].first;
 }
 
 template<class TClau, class TValor>
 const TClau& Map<TClau, TValor>::operator[](const int& posicio) const 
 {
-	/*if ((posicio < longitud()) && (posicio >= 0))
-	{
-		posicio = m_vector[posicio].first;
-	}
-	else {
-		posicio = NULL;
-	}*/
-	return m_vector[posicio].first;
-
+	if ((posicio < longitud()) && (posicio >= 0))
+		return m_vector[posicio].first;
 }
 
 template<class TClau, class TValor>
 void Map<TClau, TValor>::afegeix(const TClau& clau, const TValor& valor)
 {
-	/*bool trobat = false;
+	vector<pair<TClau, TValor>> auxiliar;
+	TClau clauAux;
+	TValor valorAux;
 
-	for (auto it = m_vector.begin(); it != m_vector.end(); it++)
-	{
-		if (it->first == clau)
+	auxiliar.push_back(make_pair(clauAux, valorAux));
+	m_vector.push_back(make_pair(clau, valor));
+
+	if (m_vector.size() > 1) {
+		for (int i = 0; i < m_vector.size() - 1; i++)
 		{
-			trobat = true;
-			it->first = clau;
-			it->second = valor;
+			if (m_vector[i].first == m_vector[i + 1].first) {
+				m_vector[i].second = m_vector[i + 1].second;
+				m_vector.pop_back();
+			}
+			else if (m_vector[i].first > m_vector[i + 1].first)
+			{
+				auxiliar[0].first = m_vector[i].first;
+				auxiliar[0].second = m_vector[i].second;
+				m_vector[i].first = m_vector[i + 1].first;
+				m_vector[i].second = m_vector[i + 1].second;
+				m_vector[i + 1].first = auxiliar[0].first;
+				m_vector[i + 1].second = auxiliar[0].second;
+			}
 		}
 	}
-
-	if (trobat == false)
-		m_vector.push_back(make_pair(clau, valor));
-
-	sort(m_vector.begin(), m_vector.end());*/
-	m_vector.push_back(make_pair(clau, valor));
-	//sort(m_vector.begin(), m_vector.end());
+	auxiliar.pop_back();
 }
 
-/*template <class TClau, class TValor>
-Map<TClau,TValor>::Map(const Map& c)
-{
-	m_vector = c.m_vector;
-	return *this;
-}*/
 
 template<class TClau, class TValor>
 Map<TClau, TValor>& Map<TClau, TValor>::operator=(const Map<TClau, TValor>& m)

@@ -1,0 +1,8 @@
+﻿  main.cpp
+c:\users\danib\desktop\laboratori de programació\tema 1\exercici 5\exercici 5\main.cpp(30): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\danib\desktop\laboratori de programació\tema 1\exercici 5\exercici 5\main.cpp(47): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\danib\desktop\laboratori de programació\tema 1\exercici 5\exercici 5\main.cpp(66): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\danib\desktop\laboratori de programació\tema 1\exercici 5\exercici 5\main.cpp(82): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\danib\desktop\laboratori de programació\tema 1\exercici 5\exercici 5\main.cpp(97): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\danib\desktop\laboratori de programació\tema 1\exercici 5\exercici 5\main.cpp(114): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
+  Exercici 5.vcxproj -> C:\Users\danib\Desktop\Laboratori de Programació\Tema 1\Exercici 5\Debug\Exercici 5.exe
