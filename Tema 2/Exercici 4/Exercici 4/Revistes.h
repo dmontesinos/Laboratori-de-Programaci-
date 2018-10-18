@@ -13,18 +13,19 @@ public:
 
 	void setPeriodicitat(string periodicitat) { m_periodicitat = periodicitat; };
 	void setNumExemplars(int exemplars) { m_numExemplars = exemplars; };
-	//void afegirCodiExemplar(int codiExemplar) { m_codiExemplar.push_back(codiExemplar); };
 	void setCodiExemplar(int codiExemplar) { m_codiExemplar.push_back(codiExemplar); };
 	
 	string getPeriodicitat() { return m_periodicitat; };
 
 	Data calcRetorn(Data data);
+	bool consulDisponibilitat(int codiExemplar);
+	void canviarDisponibilitat(int codiExemplar);
 
-	bool consultaDisponibilitat(string codi, int nExemplar, int &numPrestecs);
 
 private:
 	string m_periodicitat;
 	int m_numExemplars;
 	std::list<int> m_codiExemplar;
+	std::list<int> m_codiExemplarPrestat;
 };
 

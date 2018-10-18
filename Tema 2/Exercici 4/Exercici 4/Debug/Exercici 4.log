@@ -1,8 +1,4 @@
 ﻿  Biblioteca.cpp
-c:\users\danib\desktop\laboratori de programació\tema 2\exercici 4\exercici 4\biblioteca.cpp(144): error C2572: 'Biblioteca::prestar': nueva definición de parámetro predeterminado: parámetro 1
-  c:\users\danib\desktop\laboratori de programació\tema 2\exercici 4\exercici 4\biblioteca.h(20): note: vea la declaración de 'Biblioteca::prestar'
-c:\users\danib\desktop\laboratori de programació\tema 2\exercici 4\exercici 4\biblioteca.cpp(158): error C2572: 'Biblioteca::retornar': nueva definición de parámetro predeterminado: parámetro 1
-  c:\users\danib\desktop\laboratori de programació\tema 2\exercici 4\exercici 4\biblioteca.h(21): note: vea la declaración de 'Biblioteca::retornar'
   Llibres.cpp
   main.cpp
 c:\users\danib\desktop\laboratori de programació\tema 2\exercici 4\exercici 4\main.cpp(111): warning C4101: 'pub': variable local sin referencia
@@ -10,3 +6,4 @@ c:\users\danib\desktop\laboratori de programació\tema 2\exercici 4\exercici 4\m
 c:\users\danib\desktop\laboratori de programació\tema 2\exercici 4\exercici 4\main.cpp(191): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
   Revistes.cpp
   Generando código...
+  Exercici 4.vcxproj -> C:\Users\danib\Desktop\Laboratori de Programació\Tema 2\Exercici 4\Debug\Exercici 4.exe

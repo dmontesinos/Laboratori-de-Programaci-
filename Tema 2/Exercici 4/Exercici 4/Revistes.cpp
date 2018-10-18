@@ -1,4 +1,5 @@
 #include "Revistes.h"
+#include "Prestec.h"
 
 Data Revistes::calcRetorn(Data data)
 {
@@ -6,7 +7,21 @@ Data Revistes::calcRetorn(Data data)
 	return data;
 }
 
-bool Revistes::consultaDisponibilitat(string codi, int nExemplar, int &numPrestecs)
+bool Revistes::consulDisponibilitat(int codiExemplar)
 {
-	return true;
+	bool disponible = true;
+	for (auto it = m_codiExemplarPrestat.begin(); it != m_codiExemplarPrestat.end() && disponible == false; it++) {
+		if (*it == codiExemplar)
+			disponible = false;
+	}
+	return disponible;
+}
+
+void Revistes::canviarDisponibilitat(int codiExemplar)
+{
+	/*for (auto it = m_codiExemplarPrestat.begin(); it != m_codiExemplarPrestat.end(); it++)
+	{
+		if (*it = codiExemplar)
+
+	}*/
 }

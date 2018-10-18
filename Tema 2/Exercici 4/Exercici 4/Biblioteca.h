@@ -17,9 +17,6 @@ public:
 	bool prestar(const string& idUsuari, const string& codi, const Data& dataPrestec, Data& dataRetorn, int nExemplar);
 	bool retornar(const string& idUsuari, const string& codi, const Data& data, bool &dataCorrecta, int nExmplar);
 
-	Data calcRetorn(Data data) {};
-
-
 private:
 	std::list<Publicacio*> m_llistaPublicacions;
 	std::list<Prestec*> m_llistaPrestecs;

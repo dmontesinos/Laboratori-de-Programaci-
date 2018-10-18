@@ -7,10 +7,19 @@ Data Llibres::calcRetorn(Data data)
 	return data;
 }
 
-bool Llibres::consultaDisponibilitat(string codi, int nExemplar, int &numPrestecs)
+
+bool Llibres::consulDisponibilitat(int codiExemplar)
 {
-	if (numPrestecs < m_numCopies)
-		return true;
-	else
+	if (m_prestat)
 		return false;
+	else
+		return true;
+}
+
+void Llibres::canviarDisponibilitat(int codiExemplar)
+{
+	if (m_prestat)
+		m_prestat = false;
+	else
+		m_prestat = true;
 }

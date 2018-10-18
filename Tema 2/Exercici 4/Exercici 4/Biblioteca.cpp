@@ -81,6 +81,27 @@ bool Biblioteca::prestar(const string& idUsuari, const string& codi,
 	const Data& dataPrestec, Data& dataRetorn, int nExemplar = 0) 
 {
 	bool trovat = false;
+
+	for (auto it = m_llistaPublicacions.begin(); it != m_llistaPublicacions.end() && !trovat; it++)
+	{
+		if ((*it)->getCodi() == codi)
+		{
+			if ((*it)->consulDisponibilitat(nExemplar))
+			{
+				trovat = true;
+				Prestec prestec;
+
+				prestec.setIdUsuari(idUsuari);
+				prestec.setCodiPublicacio(codi);
+				prestec.setDataPrestec(dataPrestec);
+				prestec.setDataRetorn((*it)->calcRetorn(dataPrestec));
+
+				m_llistaPrestecs.push_back(new Prestec(prestec));
+				
+			}
+		}
+
+	}
 	return trovat;
 }
 
