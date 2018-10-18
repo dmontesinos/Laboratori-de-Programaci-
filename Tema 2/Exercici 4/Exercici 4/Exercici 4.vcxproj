@@ -124,7 +124,6 @@
   <ItemGroup>
     <ClInclude Include="Biblioteca.h" />
     <ClInclude Include="Data.h" />
-    <ClInclude Include="Exemplars.h" />
     <ClInclude Include="Llibres.h" />
     <ClInclude Include="Prestec.h" />
     <ClInclude Include="Publicacio.h" />

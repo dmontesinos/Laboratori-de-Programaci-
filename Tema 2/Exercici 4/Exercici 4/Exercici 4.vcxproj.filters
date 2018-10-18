@@ -44,9 +44,6 @@
     <ClInclude Include="Revistes.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="Exemplars.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
     <ClInclude Include="Prestec.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>

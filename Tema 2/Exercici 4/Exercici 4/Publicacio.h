@@ -15,6 +15,8 @@ public:
 	string getCodi() { return m_codi; };
 	string getTitol() { return m_titol; };
 
+	
+
 private:
 	string m_codi;
 	string m_titol;

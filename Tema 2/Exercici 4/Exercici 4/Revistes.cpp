@@ -8,8 +8,5 @@ Data Revistes::calcRetorn(Data data)
 
 bool Revistes::consultaDisponibilitat(string codi, int nExemplar, int &numPrestecs)
 {
-	if (nExemplar == m_codiExemplar)
-		return false;
-	else
-		return true;
+	return true;
 }
