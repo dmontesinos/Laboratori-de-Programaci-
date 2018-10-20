@@ -10,8 +10,11 @@ public:
 	void setCodiPublicacio(string codiPublicacio) { m_codiPublicacio = codiPublicacio; };
 	void setDataPrestec(Data data) { m_dataPrestec = data; };
 	void setDataRetorn(Data data) { m_dataRetorn = data; };
-
+	
+	string getIdUsuari() { return m_idUsuari; };
 	string getCodiPublicacio() { return m_codiPublicacio; };
+	Data getDataRetorn() { return m_dataRetorn; };
+
 
 
 private:

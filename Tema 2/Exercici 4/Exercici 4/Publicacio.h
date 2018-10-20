@@ -16,9 +16,19 @@ public:
 	string getCodi() { return m_codi; };
 	string getTitol() { return m_titol; };
 
-	virtual Data calcRetorn(Data data) { calcRetorn(data); };
-	virtual bool consulDisponibilitat(int codiExemplar) { consulDisponibilitat(codiExemplar); };
-	virtual void canviarDisponibilitat(int codiExemplar) { consulDisponibilitat(codiExemplar); };
+	virtual Data calcRetorn(Data data) 
+	{ 
+		return calcRetorn(data);
+	};
+
+	virtual bool consulDisponibilitat(int codiExemplar) 
+	{ 
+		return consulDisponibilitat(codiExemplar); 
+	};
+
+	virtual void prestar(int codiExemplar) { prestar(codiExemplar); };
+	virtual void retornar(int codiExemplar) { retornar(codiExemplar); };
+
 
 private:
 	string m_codi;

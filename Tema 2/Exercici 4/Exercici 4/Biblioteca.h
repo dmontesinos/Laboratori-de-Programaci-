@@ -15,7 +15,7 @@ public:
 
 	void llegirPublicacions(const string& nomFitxer);
 	bool prestar(const string& idUsuari, const string& codi, const Data& dataPrestec, Data& dataRetorn, int nExemplar);
-	bool retornar(const string& idUsuari, const string& codi, const Data& data, bool &dataCorrecta, int nExmplar);
+	bool retornar(const string& idUsuari, const string& codi, const Data& data, bool &dataCorrecta, int nExemplar);
 
 private:
 	std::list<Publicacio*> m_llistaPublicacions;

@@ -10,16 +10,18 @@ Data Llibres::calcRetorn(Data data)
 
 bool Llibres::consulDisponibilitat(int codiExemplar)
 {
-	if (m_prestat)
-		return false;
-	else
+	if (m_numCopies > 0)
 		return true;
+	else
+		return false;
 }
 
-void Llibres::canviarDisponibilitat(int codiExemplar)
+void Llibres::prestar(int codiExemplar)
 {
-	if (m_prestat)
-		m_prestat = false;
-	else
-		m_prestat = true;
+	m_numCopies--;
+}
+
+void Llibres::retornar(int codiExemplar)
+{
+	m_numCopies++;
 }

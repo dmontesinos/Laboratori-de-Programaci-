@@ -19,7 +19,8 @@ public:
 
 	Data calcRetorn(Data data);
 	bool consulDisponibilitat(int codiExemplar);
-	void canviarDisponibilitat(int codiExemplar);
+	void prestar(int codiExemplar);
+	void retornar(int codiExemplar);
 
 
 private:

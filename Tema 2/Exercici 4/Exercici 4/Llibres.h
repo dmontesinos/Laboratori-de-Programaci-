@@ -8,7 +8,7 @@ using namespace std;
 class Llibres : public Publicacio
 {
 public:
-	Llibres() : m_autor(""), m_numCopies(0), m_diesPrestec(0), m_prestat(false) {};
+	Llibres() : m_autor(""), m_numCopies(0), m_diesPrestec(0) {};
 	~Llibres() {};
 	void setAutor(string autor) { m_autor = autor; };
 	void setNumCopies(int copies) { m_numCopies = copies; };
@@ -20,12 +20,12 @@ public:
 
 	Data calcRetorn(Data data);
 	bool consulDisponibilitat(int codiExemplar);
-	void canviarDisponibilitat(int codiExemplar);
+	void prestar(int codiExemplar);
+	void retornar(int codiExemplar);
 
 private:
 	string m_autor;
 	int m_numCopies;
 	int m_diesPrestec;
-	bool m_prestat;
 };
 

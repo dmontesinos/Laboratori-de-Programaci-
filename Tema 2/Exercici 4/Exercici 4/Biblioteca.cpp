@@ -89,13 +89,15 @@ bool Biblioteca::prestar(const string& idUsuari, const string& codi,
 			if ((*it)->consulDisponibilitat(nExemplar))
 			{
 				trovat = true;
+
+				(*it)->prestar(nExemplar);
 				Prestec prestec;
 
 				prestec.setIdUsuari(idUsuari);
 				prestec.setCodiPublicacio(codi);
 				prestec.setDataPrestec(dataPrestec);
-				prestec.setDataRetorn((*it)->calcRetorn(dataPrestec));
-
+				dataRetorn = (*it)->calcRetorn(dataPrestec);
+				prestec.setDataRetorn(dataRetorn);
 				m_llistaPrestecs.push_back(new Prestec(prestec));
 				
 			}
@@ -105,9 +107,51 @@ bool Biblioteca::prestar(const string& idUsuari, const string& codi,
 	return trovat;
 }
 
-bool Biblioteca::retornar(const string& idUsuari, const string& codi, 
-	const Data& data, bool &dataCorrecta, int nExmplar = 0)
+bool Biblioteca::retornar(const string& idUsuari, const string& codi,
+	const Data& data, bool &dataCorrecta, int nExemplar = 0)
 {
 	bool trovat = false;
+
+	auto it = m_llistaPrestecs.begin();
+
+	while (!trovat && it != m_llistaPrestecs.end())
+	{
+		if ((*it)->getIdUsuari() == idUsuari
+			&& (*it)->getCodiPublicacio() == codi)
+		{
+			if ((*it)->getDataRetorn() < data
+				|| (*it)->getDataRetorn() == data)
+			{
+				dataCorrecta = false;
+			}
+				
+			else {
+				dataCorrecta = true;
+			}
+				
+
+			
+			trovat = true;
+
+			Publicacio publicacio;
+			bool trovat2 = false;
+	
+			auto it2 = m_llistaPublicacions.begin();
+			while (it2 != m_llistaPublicacions.end() && !trovat2)
+			{
+				if ((*it2)->getCodi() == codi)
+				{
+					trovat2 = true;
+					(*it2)->retornar(nExemplar);
+				}
+				else {
+					it2++;
+				}
+			}
+			m_llistaPrestecs.erase(it);
+		}
+		else
+			it++;
+	}
 	return trovat;
 }
