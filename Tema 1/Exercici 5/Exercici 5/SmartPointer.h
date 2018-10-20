@@ -9,7 +9,7 @@ public:
 	SmartPointer();
 	~SmartPointer();
 
-	SmartPointer(const T& c);
+	SmartPointer(SmartPointer<T>& c);
 
 	SmartPointer<T>& operator=(T* p);
 	SmartPointer<T> &operator = (SmartPointer &p);
@@ -34,7 +34,7 @@ SmartPointer<T>::~SmartPointer()
 }
 
 template<class T>
-SmartPointer<T>::SmartPointer(const T& c)
+SmartPointer<T>::SmartPointer(SmartPointer<T>& c)
 {
 	m_apuntador = new T;
 	*m_apuntador = *c.m_apuntador;
