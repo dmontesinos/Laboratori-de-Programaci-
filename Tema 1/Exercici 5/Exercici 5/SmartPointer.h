@@ -25,7 +25,7 @@ template<class T>
 SmartPointer<T>::SmartPointer()
 {
 	m_apuntador = new T;
-	m_apuntador = NULL;
+	m_apuntador = nullptr;
 }
 
 template<class T>
@@ -39,7 +39,7 @@ SmartPointer<T>::SmartPointer(SmartPointer<T>& c)
 	m_apuntador = new T;
 	*m_apuntador = *c.m_apuntador;
 	
-	c.m_apuntador = NULL;
+	c.m_apuntador = nullptr;
 }
 
 template<class T>
@@ -47,7 +47,7 @@ SmartPointer<T>& SmartPointer<T>::operator=(T* p)
 {
 
 	cout << "ESTE ES EL DE ARRIBA";
-	if (m_apuntador != NULL)
+	if (m_apuntador != nullptr)
 	{
 		delete m_apuntador;
 		m_apuntador = new T;
@@ -63,7 +63,7 @@ SmartPointer<T>& SmartPointer<T>::operator=(SmartPointer & p)
 {
 	/* SP2 = SP1  //  THIS = p */
 	cout << "ESTE ES EL DE ABAJO ";
-	if (m_apuntador != NULL)
+	if (m_apuntador != nullptr)
 	{
 		delete m_apuntador;
 		m_apuntador = new T;
@@ -71,7 +71,7 @@ SmartPointer<T>& SmartPointer<T>::operator=(SmartPointer & p)
 
 	m_apuntador = p.m_apuntador;
 
-	p.m_apuntador = NULL;
+	p.m_apuntador = nullptr;
 
 	return *this;
 }
@@ -79,7 +79,7 @@ SmartPointer<T>& SmartPointer<T>::operator=(SmartPointer & p)
 template<class T>
 T& SmartPointer<T>::operator*()
 {
-	//FALTA PONER MENSAJE POR PANTALLA EN CASO DE NULL
+	//FALTA PONER MENSAJE POR PANTALLA EN CASO DE nullptr
 	return *m_apuntador;
 }
 
@@ -92,7 +92,7 @@ T* SmartPointer<T>::operator->()
 template<class T>
 bool SmartPointer<T>::isNull()
 {
-	if (m_apuntador == NULL)
+	if (m_apuntador == nullptr)
 		return true;
 	else
 		return false;
