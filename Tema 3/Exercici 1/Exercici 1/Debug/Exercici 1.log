@@ -1,0 +1,5 @@
+﻿  Hash.cpp
+c:\users\danib\desktop\laboratori de programació\tema 3\exercici 1\exercici 1\hash.cpp(25): warning C4018: '<': no coinciden signed/unsigned
+c:\users\danib\desktop\laboratori de programació\tema 3\exercici 1\exercici 1\hash.cpp(27): warning C4244: '+=': conversión de 'double' a 'unsigned long'; posible pérdida de datos
+c:\users\danib\desktop\laboratori de programació\tema 3\exercici 1\exercici 1\hash.cpp(189): warning C4018: '<': no coinciden signed/unsigned
+  Exercici 1.vcxproj -> C:\Users\danib\Desktop\Laboratori de Programació\Tema 3\Exercici 1\Debug\Exercici 1.exe
