@@ -9,6 +9,7 @@ public:
 	~MatriuSparse();
 
 	MatriuSparse(const string &fichero);
+	friend ostream& operator<<(ostream& out, const MatriuSparse& r);
 
 private:
 	std::vector<float> m_fil;

@@ -1,9 +1,9 @@
-﻿  main.cpp
+﻿  Matriu.cpp
+  main.cpp
 c:\users\danib\source\repos\laboratori-de-programacio\tema 0\exercici 11\exercici 11\main.cpp(372): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
 c:\users\danib\source\repos\laboratori-de-programacio\tema 0\exercici 11\exercici 11\main.cpp(380): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
 c:\users\danib\source\repos\laboratori-de-programacio\tema 0\exercici 11\exercici 11\main.cpp(388): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
 c:\users\danib\source\repos\laboratori-de-programacio\tema 0\exercici 11\exercici 11\main.cpp(396): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
-  Matriu.cpp
   Generando código...
-c:\users\danib\source\repos\laboratori-de-programacio\tema 0\exercici 11\exercici 11\matriu.cpp(86): warning C4172: devolución de dirección de la variable local o temporal: matriu2
+c:\users\danib\source\repos\laboratori-de-programacio\tema 0\exercici 11\exercici 11\matriu.cpp(87): warning C4172: devolución de dirección de la variable local o temporal: matriu2
   Exercici 11.vcxproj -> C:\Users\danib\Source\Repos\laboratori-de-programacio\Tema 0\Exercici 11\x64\Debug\Exercici 11.exe
