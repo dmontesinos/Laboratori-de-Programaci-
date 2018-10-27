@@ -27,6 +27,7 @@ bool comparaArray(vector<int>& v1, vector<int>& v2, int longitud)
 	return iguals;
 }
 
+
 int main()
 {
 	const int MAX_PROVES = 5;
@@ -77,4 +78,5 @@ int main()
 	if (grade == 10.0)
 		cout << "Comment :=>> Final del test sense errors" << endl;
 	cout << "Grade :=>> " << grade << endl;
+	system("pause");
 }
