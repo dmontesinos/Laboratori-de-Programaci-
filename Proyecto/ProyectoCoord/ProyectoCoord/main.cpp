@@ -1,18 +1,17 @@
 #include "MatriuSparse.h"
-#include <iostream>
-using namespace std;
+
 
 int main()
 {
 
 	try
-	{	
+	{
 		float grade = 0.0;
 		bool valid = true;
 
 		cout << "Comment :=>> ==========================================" << endl;
 		cout << "Comment :=>> TEST SOBRE XARXA1 ....................... " << endl;
-				
+
 		string nomFitxer = "Xarxa1.txt";
 
 		cout << "Comment :=>> LLEGINT I CREANT XARXA1 ....................... " << endl;
@@ -136,7 +135,7 @@ int main()
 
 		cout << "Comment :=>> ==========================================" << endl;
 		cout << "Comment :=>> TEST SOBRE SubEpinions2 ....................... " << endl;
-		
+
 		string nomFitxerRels2 = "SubEpinions2.txt";
 
 		cout << "Comment :=>> LLEGINT I CREANT SubEpinions2 ....................... " << endl;
@@ -155,9 +154,9 @@ int main()
 		cout << "Comment :=>> ESCRIVINT SubEpinions2 ....................... " << endl;
 		cout << m2;
 
-		
+
 		trobat = m2.getVal(0, 0, valor);
-		if (trobat) 
+		if (trobat)
 			if (valor == 0)
 			{
 				cout << "Comment :=>> OK VAL(0,0): " << valor << endl;
@@ -258,34 +257,34 @@ int main()
 			grade = 0;
 		cout << endl << "Comment :=>> Grade : " << grade << endl;
 
-				
-	/*	cout << "Comment :=>> ==========================================" << endl;
-		cout << "Comment :=>> TEST SOBRE EPINIONS ....................... " << endl;
 
-		string nomFitxerRels = "Epinions.txt";
+		/*	cout << "Comment :=>> ==========================================" << endl;
+			cout << "Comment :=>> TEST SOBRE EPINIONS ....................... " << endl;
 
-		cout << "Comment :=>> LLEGINT I CREANT Epinions ....................... " << endl;
-		MatriuSparse m3(nomFitxerRels);
+			string nomFitxerRels = "Epinions.txt";
 
-		cout << "Comment :=>> ESCRIVINT Epinions ....................... " << endl;
-		cout << m3;
+			cout << "Comment :=>> LLEGINT I CREANT Epinions ....................... " << endl;
+			MatriuSparse m3(nomFitxerRels);
 
-		cout << "Comment :=>> AFEGINT 7 a posicio (0,2) ....................... " << endl;
-		m3.setVal(0, 2, 7);
-		cout << "Comment :=>> AFEGINT 8 a posicio (8,1) ....................... " << endl;
-		m3.setVal(8, 1, 8);
-		cout << "Comment :=>> AFEGINT 9 a posicio (5,9) ....................... " << endl;
-		m3.setVal(5, 9, 9);
+			cout << "Comment :=>> ESCRIVINT Epinions ....................... " << endl;
+			cout << m3;
 
-		cout << "Comment :=>> ESCRIVINT Epinions ....................... " << endl;
-		cout << m3;
+			cout << "Comment :=>> AFEGINT 7 a posicio (0,2) ....................... " << endl;
+			m3.setVal(0, 2, 7);
+			cout << "Comment :=>> AFEGINT 8 a posicio (8,1) ....................... " << endl;
+			m3.setVal(8, 1, 8);
+			cout << "Comment :=>> AFEGINT 9 a posicio (5,9) ....................... " << endl;
+			m3.setVal(5, 9, 9);
 
-		valor;
-		trobat = m3.getVal(0, 0, valor);
-		trobat = m3.getVal(0, 2, valor);
-		trobat = m3.getVal(8, 1, valor);
-		
-		*/
+			cout << "Comment :=>> ESCRIVINT Epinions ....................... " << endl;
+			cout << m3;
+
+			valor;
+			trobat = m3.getVal(0, 0, valor);
+			trobat = m3.getVal(0, 2, valor);
+			trobat = m3.getVal(8, 1, valor);
+
+			*/
 
 		if (valid)
 			cout << "Comment :=>> Final del test sense errors" << endl;
@@ -296,11 +295,11 @@ int main()
 	}
 	catch (std::bad_alloc)
 	{
-		cout << "Comment ==> error allocatant memoria:" << endl;		
+		cout << "Comment ==> error allocatant memoria:" << endl;
 	}
 	catch (const char* msg)
 	{
 		cout << msg << endl;
 	}
-	
+	system("pause");
 }

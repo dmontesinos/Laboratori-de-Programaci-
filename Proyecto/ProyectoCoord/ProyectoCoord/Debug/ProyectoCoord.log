@@ -1,0 +1,23 @@
+﻿  MatriuSparse.cpp
+c:\users\danib\desktop\laboratori de programació\proyecto\proyectocoord\proyectocoord\matriusparse.cpp(13): warning C4101: 'valor': variable local sin referencia
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\utility(239): warning C4244: 'inicializando': conversión de '_Ty' a '_Ty1'; posible pérdida de datos
+          with
+          [
+              _Ty=float
+          ]
+          and
+          [
+              _Ty1=int
+          ]
+  c:\users\danib\desktop\laboratori de programació\proyecto\proyectocoord\proyectocoord\matriusparse.cpp(25): note: vea la referencia a la creación de instancias de plantilla de función 'std::pair<int,int>::pair<float,float,0>(std::pair<float,float> &&) noexcept' que se está compilando
+  c:\users\danib\desktop\laboratori de programació\proyecto\proyectocoord\proyectocoord\matriusparse.cpp(25): note: vea la referencia a la creación de instancias de plantilla de función 'std::pair<int,int>::pair<float,float,0>(std::pair<float,float> &&) noexcept' que se está compilando
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\utility(240): warning C4244: 'inicializando': conversión de '_Ty' a '_Ty2'; posible pérdida de datos
+          with
+          [
+              _Ty=float
+          ]
+          and
+          [
+              _Ty2=int
+          ]
+  ProyectoCoord.vcxproj -> C:\Users\danib\Desktop\Laboratori de Programació\Proyecto\ProyectoCoord\Debug\ProyectoCoord.exe
