@@ -1,5 +1,10 @@
 ﻿  MatriuSparse.cpp
-c:\users\danib\desktop\laboratori de programació\proyecto\proyectocoord\proyectocoord\matriusparse.cpp(13): warning C4101: 'valor': variable local sin referencia
+c:\users\danib\desktop\laboratori de programació\proyecto\proyectocoord\proyectocoord\matriusparse.cpp(12): warning C4101: 'valor': variable local sin referencia
+c:\users\danib\desktop\laboratori de programació\proyecto\proyectocoord\proyectocoord\matriusparse.cpp(71): warning C4018: '>=': no coinciden signed/unsigned
+c:\users\danib\desktop\laboratori de programació\proyecto\proyectocoord\proyectocoord\matriusparse.cpp(78): warning C4018: '<': no coinciden signed/unsigned
+c:\users\danib\desktop\laboratori de programació\proyecto\proyectocoord\proyectocoord\matriusparse.cpp(106): warning C4018: '<': no coinciden signed/unsigned
+c:\users\danib\desktop\laboratori de programació\proyecto\proyectocoord\proyectocoord\matriusparse.cpp(121): warning C4018: '<': no coinciden signed/unsigned
+c:\users\danib\desktop\laboratori de programació\proyecto\proyectocoord\proyectocoord\matriusparse.cpp(123): warning C4018: '<': no coinciden signed/unsigned
 c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\utility(239): warning C4244: 'inicializando': conversión de '_Ty' a '_Ty1'; posible pérdida de datos
           with
           [
@@ -9,8 +14,8 @@ c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.1
           [
               _Ty1=int
           ]
-  c:\users\danib\desktop\laboratori de programació\proyecto\proyectocoord\proyectocoord\matriusparse.cpp(25): note: vea la referencia a la creación de instancias de plantilla de función 'std::pair<int,int>::pair<float,float,0>(std::pair<float,float> &&) noexcept' que se está compilando
-  c:\users\danib\desktop\laboratori de programació\proyecto\proyectocoord\proyectocoord\matriusparse.cpp(25): note: vea la referencia a la creación de instancias de plantilla de función 'std::pair<int,int>::pair<float,float,0>(std::pair<float,float> &&) noexcept' que se está compilando
+  c:\users\danib\desktop\laboratori de programació\proyecto\proyectocoord\proyectocoord\matriusparse.cpp(28): note: vea la referencia a la creación de instancias de plantilla de función 'std::pair<int,int>::pair<float,float,0>(std::pair<float,float> &&) noexcept' que se está compilando
+  c:\users\danib\desktop\laboratori de programació\proyecto\proyectocoord\proyectocoord\matriusparse.cpp(28): note: vea la referencia a la creación de instancias de plantilla de función 'std::pair<int,int>::pair<float,float,0>(std::pair<float,float> &&) noexcept' que se está compilando
 c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\utility(240): warning C4244: 'inicializando': conversión de '_Ty' a '_Ty2'; posible pérdida de datos
           with
           [

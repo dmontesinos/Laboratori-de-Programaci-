@@ -122,8 +122,8 @@
     <ClInclude Include="MatriuSparse.h" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Epinions.txt" />
-    <Text Include="SubEpinions2.txt" />
+    <Text Include="EpinionsOrdenat.txt" />
+    <Text Include="SubEpinions2Ordenat.txt" />
     <Text Include="Xarxa1.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

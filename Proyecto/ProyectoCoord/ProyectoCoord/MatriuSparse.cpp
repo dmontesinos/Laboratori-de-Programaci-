@@ -3,7 +3,6 @@
 #include <algorithm>
 
 
-
 MatriuSparse::MatriuSparse(const string &nombreFichero)
 {
 	ifstream fichero;
@@ -11,7 +10,7 @@ MatriuSparse::MatriuSparse(const string &nombreFichero)
 	float fila;
 	float columna;
 	float valor;
-
+	float max = 0;
 
 	fichero.open(nombreFichero);
 
@@ -21,11 +20,26 @@ MatriuSparse::MatriuSparse(const string &nombreFichero)
 		{
 			fichero >> fila;
 			fichero >> columna;
-
+			/*if (fila > max)
+				max = fila;
+			if (columna > max)
+				max = columna;
+			*/
 			m_coordenadas.push_back(make_pair(fila, columna));
 			m_val.push_back(1);
 		}
 		fichero.close();
+
+		/*m_matriz.resize(max+1);
+		for (int i = 0; i < m_matriz.size(); i++)
+		{
+			m_matriz[i].resize(max+1);
+		}
+		
+		for (auto it = m_coordenadas.begin(); it != m_coordenadas.end(); it++)
+		{
+			m_matriz[it->first][it->second] = 1;
+		}*/
 	}
 	else {
 		throw "No se ha podido leer el fichero.";
@@ -34,70 +48,83 @@ MatriuSparse::MatriuSparse(const string &nombreFichero)
 
 MatriuSparse::MatriuSparse(int filas, int columnas)
 {
-	vector <vector<float>> m_matriz(filas, vector<float>(columnas));
+	vector<vector<float>> m_matriz(filas, vector<float>(columnas));
 }
 
-MatriuSparse::MatriuSparse(const MatriuSparse &c)//FALTA REVISAR
+MatriuSparse::MatriuSparse(const MatriuSparse &c)
 {
+	vector<vector<float>> m_matriz(c.m_matriz.size(), vector<float>(c.m_matriz.size(), 0));
 	m_matriz = c.m_matriz;
 }
 
+MatriuSparse& MatriuSparse::operator=(const MatriuSparse& c)
+{
+	m_coordenadas = c.m_coordenadas;
+	m_matriz = c.m_matriz;
+	m_val = c.m_val;
+
+	return *this;
+}
 
 void MatriuSparse::setVal(int fila, int columna, float valor)
 {
+	if (fila >= m_matriz.size() || columna >= m_matriz.size())
+	{
+		int max = fila;
+		if (columna > max)
+			max = columna;
+
+		m_matriz.resize(max+1);
+		for (int i = 0; i < m_matriz.size(); i++)
+		{
+			m_matriz[i].resize(max+1);
+		}
+	}
+	
 	m_coordenadas.push_back(make_pair(fila, columna));
 	m_val.push_back(valor);
+	m_matriz[fila][columna] = valor;
 }
 
 bool MatriuSparse::getVal(int fila, int columna, float &valor)
 {
-	bool encontrado = false;
-	bool encontradoBucle = false;
+	/*bool encontrado = false;
 
-	for (auto it = m_coordenadas.begin(); it != m_coordenadas.end() && !encontradoBucle; it++)
-	{
+	for (auto it = m_coordenadas.begin(); it != m_coordenadas.end(); it++)
 		if (it->first == fila && it->second == columna)
 		{
+			encontrado = true;
 			int posicion = distance(m_coordenadas.begin(), it);
 			valor = m_val[posicion];
-			encontradoBucle = true;
-			encontrado = true;
 		}
-		else {
-			encontrado = true;
-			valor = 0;
-		}
+
+	return encontrado;*/
+
+	
+	bool encontrado = false;
+
+	if (fila < m_matriz.size() && columna < m_matriz.size())
+	{
+		encontrado = true;
+		valor = m_matriz[fila][columna];
 	}
 	return encontrado;
+	
 }
 
 
 ostream &operator<<(ostream &out, const MatriuSparse &matriu)
-{
-	int max = 0;
-	for (auto it = matriu.m_coordenadas.begin(); it != matriu.m_coordenadas.end(); it++)
-	{
-		if (it->first > max)
-			max = it->first;
-		if (it->second > max)
-			max = it->second;
-	}
+{	
+	vector<vector<float>> m_auxiliar;
+	m_auxiliar = matriu.m_matriz;
 
-	vector <vector<float> > matriz(max +1, vector<float>(max +1, 0)); //Crea una matriz de (#fila) filas y (#columna) columnas.
-	
-	for (auto it = matriu.m_coordenadas.begin(); it != matriu.m_coordenadas.end(); it++)
+	for (int fila = 0; fila < matriu.m_matriz.size(); fila++)
 	{
-		int posicion = distance(matriu.m_coordenadas.begin(), it);
-		matriz[it->first][it->second] = matriu.m_val[posicion];
-	}
-
-	for (auto vec : matriz)
-	{
-		for (auto x : vec)
-			out << x << ",";
-
+		for (int columna = 0; columna < matriu.m_matriz.size(); columna++)
+		{
+			out << m_auxiliar[fila][columna] << ",";
+		}
 		out << endl;
 	}
-
 	return out;
 }

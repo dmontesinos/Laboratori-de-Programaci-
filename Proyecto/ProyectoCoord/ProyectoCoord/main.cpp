@@ -291,6 +291,7 @@ int main()
 		if (grade < 0)
 			grade = 0;
 		cout << endl << "Grade :=>> " << grade << endl;
+		system("pause");
 		return 0;
 	}
 	catch (std::bad_alloc)

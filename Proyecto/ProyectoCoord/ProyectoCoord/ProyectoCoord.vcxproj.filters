@@ -28,10 +28,10 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Epinions.txt">
+    <Text Include="EpinionsOrdenat.txt">
       <Filter>Archivos de recursos</Filter>
     </Text>
-    <Text Include="SubEpinions2.txt">
+    <Text Include="SubEpinions2Ordenat.txt">
       <Filter>Archivos de recursos</Filter>
     </Text>
     <Text Include="Xarxa1.txt">
