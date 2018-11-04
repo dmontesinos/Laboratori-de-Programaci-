@@ -1,11 +1,12 @@
 #include <vector>
 #include <string>
 #include <iostream>
+#include <fstream>
 using namespace std;
 
 class MatriuSparse {
 public:
-	MatriuSparse();
+	MatriuSparse() {};
 	~MatriuSparse() {};
 
 	MatriuSparse(const string &fichero);
@@ -19,6 +20,13 @@ public:
 
 	MatriuSparse& operator=(const MatriuSparse& c);
 	friend ostream& operator<<(ostream& out, const MatriuSparse& r);
+
+	//MatriuSparse& operator*(const MatriuSparse& m); //No necesario
+	MatriuSparse& operator*(const int valor);
+
+	MatriuSparse& operator/(const int valor);
+
+	void init(int filas, int columnas);
 
 private:
 	vector<pair<int,int>> m_coordenadas;
