@@ -104,7 +104,7 @@ int main()
 	cout << (*it).first << " " << (*it).second << endl;
 	*/
 
-	/*vector<tuple<int, int, float>> m_vector;
+	vector<tuple<int, int, float>> m_vector;
 	m_vector.push_back(tuple<int,int,float>(25, 30, 35));
 	m_vector.push_back(tuple<int, int, float>(50, 60, 70));
 	m_vector.push_back(tuple<int, int, float>(51, 61, 71.5));
@@ -112,11 +112,11 @@ int main()
 	for (auto it = m_vector.begin(); it != m_vector.end(); it++)
 	{
 		cout << get<0>(*it) << " " << get<1>(*it) << " " << get<2>(*it) << endl;
-	}*/
+	}
 	
 
 
-		vector<list<int>> m_vector = { 
+	/*	vector<list<int>> m_vector = { 
 		{},
 		{ 4 },
 		{ 1, 2, 3, 4, 5 },
@@ -139,7 +139,7 @@ int main()
  		}
 		cout << " - El mas grande es: " << max << endl;
 	}
-	
+	*/
 
 	return 0;
 }

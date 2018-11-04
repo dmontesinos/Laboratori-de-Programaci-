@@ -2,6 +2,7 @@
 #include <string>
 #include <iostream>
 #include <fstream>
+#include <tuple>
 using namespace std;
 
 class MatriuSparse {
@@ -29,7 +30,6 @@ public:
 	void init(int filas, int columnas);
 
 private:
-	vector<pair<int,int>> m_coordenadas;
-	vector<float> m_val;
+	vector<tuple<int,int,float>> m_coordenadas;
 	vector <vector<float>> m_matriz;
 };

@@ -2,7 +2,6 @@
 #include <fstream>
 #include <algorithm>
 
-
 MatriuSparse::MatriuSparse(const string &nombreFichero)
 {
 	ifstream fichero;
@@ -25,17 +24,17 @@ MatriuSparse::MatriuSparse(const string &nombreFichero)
 			if (columna > max)
 				max = columna;*/
 			
-			m_coordenadas.push_back(make_pair(fila, columna));
-			m_val.push_back(1);
+			m_coordenadas.push_back(tuple<int,int,float>(fila, columna,1));
+
 		}
 		fichero.close();
 
 		for (auto it = m_coordenadas.begin(); it != m_coordenadas.end(); it++)
 		{
-			if (it->first > max)
-				max = it->first;
-			if (it->second > max)
-				max = it->second;
+			if (get<0>(*it) > max)
+				max = get<0>(*it);
+			if (get<1>(*it) > max)
+				max = get<1>(*it);
 		}
 		
 		m_matriz.resize(max+1);
@@ -47,7 +46,7 @@ MatriuSparse::MatriuSparse(const string &nombreFichero)
 		for (auto it = m_coordenadas.begin(); it != m_coordenadas.end(); it++)
 		{
 			//cout << it->first << " " << it->second << endl;
-			m_matriz[it->first][it->second] = 1;
+			m_matriz[get<0>(*it)][get<1>(*it)] = 1;
 		}
 
 
@@ -83,7 +82,6 @@ MatriuSparse& MatriuSparse::operator=(const MatriuSparse& c)
 	cout << this->getNColumnes();
 	m_coordenadas = c.m_coordenadas;
 	m_matriz = c.m_matriz;
-	m_val = c.m_val;
 
 	return *this;
 }
@@ -119,7 +117,6 @@ MatriuSparse& MatriuSparse::operator*(const int valor)
 	MatriuSparse aux(this->m_matriz.size(), this->m_matriz.size());
 	aux.m_matriz = this->m_matriz;
 	aux.m_coordenadas = this->m_coordenadas;
-	aux.m_val = this->m_val;
 
 	cout << aux.m_matriz.size() << endl;
 	cout << aux.getNFiles() << endl;
@@ -168,8 +165,7 @@ void MatriuSparse::setVal(int fila, int columna, float valor)
 		}
 	}
 	
-	m_coordenadas.push_back(make_pair(fila, columna));
-	m_val.push_back(valor);
+	m_coordenadas.push_back(tuple<int,int,float>(fila, columna,valor));
 	m_matriz[fila][columna] = valor;
 }
 
