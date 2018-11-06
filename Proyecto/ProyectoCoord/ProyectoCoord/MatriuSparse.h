@@ -30,6 +30,6 @@ public:
 	void init(int filas, int columnas);
 
 private:
-	vector<tuple<int,int,float>> m_coordenadas;
+	//vector<tuple<int,int,float>> m_coordenadas;
 	vector <vector<float>> m_matriz;
 };

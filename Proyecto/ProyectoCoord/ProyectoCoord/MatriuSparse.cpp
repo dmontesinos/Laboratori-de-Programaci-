@@ -10,6 +10,7 @@ MatriuSparse::MatriuSparse(const string &nombreFichero)
 	float columna;
 	float valor;
 	float max = 0;
+	vector<tuple<int, int, float>> m_coordenadas;
 
 	fichero.open(nombreFichero);
 
@@ -73,14 +74,14 @@ MatriuSparse::MatriuSparse(int filas, int columnas)
 
 MatriuSparse::MatriuSparse(const MatriuSparse &c)
 {
-	
-	//vector<vector<float>> newMatriz(c.m_matriz.size(), vector<float>(c.m_matriz.size()));
+	m_matriz = c.m_matriz;
+	//m_coordenadas = c.m_coordenadas;
 }
 
 MatriuSparse& MatriuSparse::operator=(const MatriuSparse& c)
 {
 	cout << this->getNColumnes();
-	m_coordenadas = c.m_coordenadas;
+	//m_coordenadas = c.m_coordenadas;
 	m_matriz = c.m_matriz;
 
 	return *this;
@@ -114,35 +115,24 @@ MatriuSparse& MatriuSparse::operator=(const MatriuSparse& c)
 
 MatriuSparse& MatriuSparse::operator*(const int valor)
 {
-	MatriuSparse aux(this->m_matriz.size(), this->m_matriz.size());
-	aux.m_matriz = this->m_matriz;
-	aux.m_coordenadas = this->m_coordenadas;
-
-	cout << aux.m_matriz.size() << endl;
-	cout << aux.getNFiles() << endl;
-	cout << aux.getNColumnes() << endl;
-
-	for(int i = 0; i < aux.m_matriz.size(); i++)
-		for (int j = 0; j < aux.m_matriz[i].size(); j++)
+	for (int i = 0; i < m_matriz.size(); i++) {
+		for (int j = 0; j < m_matriz.size(); j++)
 		{
-			aux.m_matriz[i][j] = this->m_matriz[i][j];
-			aux.m_matriz[i][j] *= valor;
+			m_matriz[i][j] *= valor;
 		}
-	*this = aux;
-	return aux;
+	}
+	return *this;
 }
 
 MatriuSparse & MatriuSparse::operator/(const int valor)
 {
-	MatriuSparse matriz(this->getNFiles(), this->getNColumnes());
-
-	for (int i = 0; i < matriz.m_matriz.size(); i++)
-		for (int j = 0; j < matriz.m_matriz[i].size(); j++)
+	for (int i = 0; i < m_matriz.size(); i++) {
+		for (int j = 0; j < m_matriz.size(); j++)
 		{
-			matriz.m_matriz[i][j] = this->m_matriz[i][j];
-			matriz.m_matriz[i][j] /= valor;
+			m_matriz[i][j] /= valor;
 		}
-	return matriz;
+	}
+	return *this;
 }
 
 void MatriuSparse::init(int filas, int columnas)
@@ -165,25 +155,12 @@ void MatriuSparse::setVal(int fila, int columna, float valor)
 		}
 	}
 	
-	m_coordenadas.push_back(tuple<int,int,float>(fila, columna,valor));
+	//m_coordenadas.push_back(tuple<int,int,float>(fila, columna,valor));
 	m_matriz[fila][columna] = valor;
 }
 
 bool MatriuSparse::getVal(int fila, int columna, float &valor)
 {
-	/*bool encontrado = false;
-
-	for (auto it = m_coordenadas.begin(); it != m_coordenadas.end(); it++)
-		if (it->first == fila && it->second == columna)
-		{
-			encontrado = true;
-			int posicion = distance(m_coordenadas.begin(), it);
-			valor = m_val[posicion];
-		}
-
-	return encontrado;*/
-
-	
 	bool encontrado = false;
 
 	if (fila < m_matriz.size() && columna < m_matriz.size())
@@ -213,18 +190,3 @@ ostream &operator<<(ostream &out, const MatriuSparse &matriu)
 	}
 	return out;
 }
-/*ostream &operator<<(ostream &out, const MatriuSparse &matriu)
-{	
-	vector<vector<float>> m_auxiliar;
-	m_auxiliar = matriu.m_matriz;
-
-	for (int fila = 0; fila < matriu.m_matriz.size(); fila++)
-	{
-		for (int columna = 0; columna < matriu.m_matriz.size(); columna++)
-		{
-			out << m_auxiliar[fila][columna] << ",";
-		}
-		out << endl;
-	}
-	return out;
-}*/
