@@ -20,13 +20,8 @@ MatriuSparse::MatriuSparse(const string &nombreFichero)
 		{
 			fichero >> fila;
 			fichero >> columna;
-		/*if (fila > max)
-				max = fila;
-			if (columna > max)
-				max = columna;*/
 			
 			m_coordenadas.push_back(tuple<int,int,float>(fila, columna,1));
-
 		}
 		fichero.close();
 
@@ -46,7 +41,6 @@ MatriuSparse::MatriuSparse(const string &nombreFichero)
 		
 		for (auto it = m_coordenadas.begin(); it != m_coordenadas.end(); it++)
 		{
-			//cout << it->first << " " << it->second << endl;
 			m_matriz[get<0>(*it)][get<1>(*it)] = 1;
 		}
 

@@ -1,19 +1,19 @@
 ﻿  MatriuSparse.cpp
-c:\users\danib\desktop\laboratori de programació\proyecto\proyectocoord\proyectocoord\matriusparse.cpp(35): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-c:\users\danib\desktop\laboratori de programació\proyecto\proyectocoord\proyectocoord\matriusparse.cpp(37): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-c:\users\danib\desktop\laboratori de programació\proyecto\proyectocoord\proyectocoord\matriusparse.cpp(40): warning C4244: 'argumento': conversión de 'float' a 'const unsigned int'; posible pérdida de datos
-c:\users\danib\desktop\laboratori de programació\proyecto\proyectocoord\proyectocoord\matriusparse.cpp(41): warning C4018: '<': no coinciden signed/unsigned
-c:\users\danib\desktop\laboratori de programació\proyecto\proyectocoord\proyectocoord\matriusparse.cpp(43): warning C4244: 'argumento': conversión de 'float' a 'const unsigned int'; posible pérdida de datos
+c:\users\danib\desktop\laboratori de programació\proyecto\proyectocoord\proyectocoord\matriusparse.cpp(31): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\danib\desktop\laboratori de programació\proyecto\proyectocoord\proyectocoord\matriusparse.cpp(33): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\danib\desktop\laboratori de programació\proyecto\proyectocoord\proyectocoord\matriusparse.cpp(36): warning C4244: 'argumento': conversión de 'float' a 'const unsigned int'; posible pérdida de datos
+c:\users\danib\desktop\laboratori de programació\proyecto\proyectocoord\proyectocoord\matriusparse.cpp(37): warning C4018: '<': no coinciden signed/unsigned
+c:\users\danib\desktop\laboratori de programació\proyecto\proyectocoord\proyectocoord\matriusparse.cpp(39): warning C4244: 'argumento': conversión de 'float' a 'const unsigned int'; posible pérdida de datos
 c:\users\danib\desktop\laboratori de programació\proyecto\proyectocoord\proyectocoord\matriusparse.cpp(11): warning C4101: 'valor': variable local sin referencia
-c:\users\danib\desktop\laboratori de programació\proyecto\proyectocoord\proyectocoord\matriusparse.cpp(125): warning C4018: '<': no coinciden signed/unsigned
-c:\users\danib\desktop\laboratori de programació\proyecto\proyectocoord\proyectocoord\matriusparse.cpp(126): warning C4018: '<': no coinciden signed/unsigned
-c:\users\danib\desktop\laboratori de programació\proyecto\proyectocoord\proyectocoord\matriusparse.cpp(139): warning C4018: '<': no coinciden signed/unsigned
-c:\users\danib\desktop\laboratori de programació\proyecto\proyectocoord\proyectocoord\matriusparse.cpp(140): warning C4018: '<': no coinciden signed/unsigned
-c:\users\danib\desktop\laboratori de programació\proyecto\proyectocoord\proyectocoord\matriusparse.cpp(155): warning C4018: '>=': no coinciden signed/unsigned
-c:\users\danib\desktop\laboratori de programació\proyecto\proyectocoord\proyectocoord\matriusparse.cpp(162): warning C4018: '<': no coinciden signed/unsigned
-c:\users\danib\desktop\laboratori de programació\proyecto\proyectocoord\proyectocoord\matriusparse.cpp(189): warning C4018: '<': no coinciden signed/unsigned
-c:\users\danib\desktop\laboratori de programació\proyecto\proyectocoord\proyectocoord\matriusparse.cpp(205): warning C4018: '<': no coinciden signed/unsigned
-c:\users\danib\desktop\laboratori de programació\proyecto\proyectocoord\proyectocoord\matriusparse.cpp(207): warning C4018: '<': no coinciden signed/unsigned
+c:\users\danib\desktop\laboratori de programació\proyecto\proyectocoord\proyectocoord\matriusparse.cpp(112): warning C4018: '<': no coinciden signed/unsigned
+c:\users\danib\desktop\laboratori de programació\proyecto\proyectocoord\proyectocoord\matriusparse.cpp(113): warning C4018: '<': no coinciden signed/unsigned
+c:\users\danib\desktop\laboratori de programació\proyecto\proyectocoord\proyectocoord\matriusparse.cpp(123): warning C4018: '<': no coinciden signed/unsigned
+c:\users\danib\desktop\laboratori de programació\proyecto\proyectocoord\proyectocoord\matriusparse.cpp(124): warning C4018: '<': no coinciden signed/unsigned
+c:\users\danib\desktop\laboratori de programació\proyecto\proyectocoord\proyectocoord\matriusparse.cpp(139): warning C4018: '>=': no coinciden signed/unsigned
+c:\users\danib\desktop\laboratori de programació\proyecto\proyectocoord\proyectocoord\matriusparse.cpp(146): warning C4018: '<': no coinciden signed/unsigned
+c:\users\danib\desktop\laboratori de programació\proyecto\proyectocoord\proyectocoord\matriusparse.cpp(160): warning C4018: '<': no coinciden signed/unsigned
+c:\users\danib\desktop\laboratori de programació\proyecto\proyectocoord\proyectocoord\matriusparse.cpp(176): warning C4018: '<': no coinciden signed/unsigned
+c:\users\danib\desktop\laboratori de programació\proyecto\proyectocoord\proyectocoord\matriusparse.cpp(178): warning C4018: '<': no coinciden signed/unsigned
 c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\tuple(236): warning C4244: 'inicializando': conversión de 'float' a '_Ty'; posible pérdida de datos
           with
           [
@@ -45,12 +45,12 @@ c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.1
               _Tag=std::_Exact_args_t,
               _This2=float &
           ]
-  c:\users\danib\desktop\laboratori de programació\proyecto\proyectocoord\proyectocoord\matriusparse.cpp(27): note: vea la referencia a la creación de instancias de plantilla de función 'std::tuple<int,int,float>::tuple<float&,float&,int,0>(_This2,float &,int &&) noexcept' que se está compilando
+  c:\users\danib\desktop\laboratori de programació\proyecto\proyectocoord\proyectocoord\matriusparse.cpp(24): note: vea la referencia a la creación de instancias de plantilla de función 'std::tuple<int,int,float>::tuple<float&,float&,int,0>(_This2,float &,int &&) noexcept' que se está compilando
           with
           [
               _This2=float &
           ]
-  c:\users\danib\desktop\laboratori de programació\proyecto\proyectocoord\proyectocoord\matriusparse.cpp(27): note: vea la referencia a la creación de instancias de plantilla de función 'std::tuple<int,int,float>::tuple<float&,float&,int,0>(_This2,float &,int &&) noexcept' que se está compilando
+  c:\users\danib\desktop\laboratori de programació\proyecto\proyectocoord\proyectocoord\matriusparse.cpp(24): note: vea la referencia a la creación de instancias de plantilla de función 'std::tuple<int,int,float>::tuple<float&,float&,int,0>(_This2,float &,int &&) noexcept' que se está compilando
           with
           [
               _This2=float &
@@ -106,8 +106,4 @@ c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.1
               _Tag=std::_Exact_args_t,
               _This2=float &
           ]
-  main.cpp
-  Generando código...
-c:\users\danib\desktop\laboratori de programació\proyecto\proyectocoord\proyectocoord\matriusparse.cpp(145): warning C4172: devolución de dirección de la variable local o temporal: matriz
-c:\users\danib\desktop\laboratori de programació\proyecto\proyectocoord\proyectocoord\matriusparse.cpp(132): warning C4172: devolución de dirección de la variable local o temporal: aux
   ProyectoCoord.vcxproj -> C:\Users\danib\Desktop\Laboratori de Programació\Proyecto\ProyectoCoord\Debug\ProyectoCoord.exe

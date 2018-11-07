@@ -1,0 +1,107 @@
+﻿  MatriuSparse.cpp
+c:\users\danib\source\repos\laboratori-de-programacio\proyecto\proyectocoord\proyectocoord\matriusparse.h(19): warning C4267: 'return': conversión de 'size_t' a 'int'; posible pérdida de datos
+c:\users\danib\source\repos\laboratori-de-programacio\proyecto\proyectocoord\proyectocoord\matriusparse.h(20): warning C4267: 'return': conversión de 'size_t' a 'int'; posible pérdida de datos
+c:\users\danib\source\repos\laboratori-de-programacio\proyecto\proyectocoord\proyectocoord\matriusparse.cpp(36): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\danib\source\repos\laboratori-de-programacio\proyecto\proyectocoord\proyectocoord\matriusparse.cpp(38): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\danib\source\repos\laboratori-de-programacio\proyecto\proyectocoord\proyectocoord\matriusparse.cpp(41): warning C4244: 'argumento': conversión de 'float' a 'const unsigned __int64'; posible pérdida de datos
+c:\users\danib\source\repos\laboratori-de-programacio\proyecto\proyectocoord\proyectocoord\matriusparse.cpp(44): warning C4244: 'argumento': conversión de 'float' a 'const unsigned __int64'; posible pérdida de datos
+c:\users\danib\source\repos\laboratori-de-programacio\proyecto\proyectocoord\proyectocoord\matriusparse.cpp(11): warning C4101: 'valor': variable local sin referencia
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\tuple(236): warning C4244: 'inicializando': conversión de 'float' a '_Ty'; posible pérdida de datos
+          with
+          [
+              _Ty=int
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\tuple(357): note: vea la referencia a la creación de instancias de plantilla de función 'std::_Tuple_val<_This>::_Tuple_val<float&>(_Other)' que se está compilando
+          with
+          [
+              _This=int,
+              _Other=float &
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\tuple(358): note: vea la referencia a la creación de instancias de plantilla de función 'std::_Tuple_val<_This>::_Tuple_val<float&>(_Other)' que se está compilando
+          with
+          [
+              _This=int,
+              _Other=float &
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\tuple(468): note: vea la referencia a la creación de instancias de plantilla de función 'std::tuple<int,int,float>::tuple<std::_Exact_args_t,float&,float&,_Ty,0>(_Tag,_This2,float &,_Ty &&)' que se está compilando
+          with
+          [
+              _Ty=int,
+              _Tag=std::_Exact_args_t,
+              _This2=float &
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\tuple(468): note: vea la referencia a la creación de instancias de plantilla de función 'std::tuple<int,int,float>::tuple<std::_Exact_args_t,float&,float&,_Ty,0>(_Tag,_This2,float &,_Ty &&)' que se está compilando
+          with
+          [
+              _Ty=int,
+              _Tag=std::_Exact_args_t,
+              _This2=float &
+          ]
+  c:\users\danib\source\repos\laboratori-de-programacio\proyecto\proyectocoord\proyectocoord\matriusparse.cpp(28): note: vea la referencia a la creación de instancias de plantilla de función 'std::tuple<int,int,float>::tuple<float&,float&,int,0>(_This2,float &,int &&) noexcept' que se está compilando
+          with
+          [
+              _This2=float &
+          ]
+  c:\users\danib\source\repos\laboratori-de-programacio\proyecto\proyectocoord\proyectocoord\matriusparse.cpp(28): note: vea la referencia a la creación de instancias de plantilla de función 'std::tuple<int,int,float>::tuple<float&,float&,int,0>(_This2,float &,int &&) noexcept' que se está compilando
+          with
+          [
+              _This2=float &
+          ]
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\tuple(236): warning C4244: 'inicializando': conversión de '_Ty' a '_Ty'; posible pérdida de datos
+          with
+          [
+              _Ty=int
+          ]
+          and
+          [
+              _Ty=float
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\tuple(357): note: vea la referencia a la creación de instancias de plantilla de función 'std::_Tuple_val<_This>::_Tuple_val<_Ty>(_Other &&)' que se está compilando
+          with
+          [
+              _This=float,
+              _Ty=int,
+              _Other=int
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\tuple(358): note: vea la referencia a la creación de instancias de plantilla de función 'std::_Tuple_val<_This>::_Tuple_val<_Ty>(_Other &&)' que se está compilando
+          with
+          [
+              _This=float,
+              _Ty=int,
+              _Other=int
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\tuple(357): note: vea la referencia a la creación de instancias de plantilla de función 'std::tuple<float>::tuple<std::_Exact_args_t,_Ty,,0>(_Tag,_This2 &&)' que se está compilando
+          with
+          [
+              _Ty=int,
+              _Tag=std::_Exact_args_t,
+              _This2=int
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\tuple(357): note: vea la referencia a la creación de instancias de plantilla de función 'std::tuple<float>::tuple<std::_Exact_args_t,_Ty,,0>(_Tag,_This2 &&)' que se está compilando
+          with
+          [
+              _Ty=int,
+              _Tag=std::_Exact_args_t,
+              _This2=int
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\tuple(357): note: vea la referencia a la creación de instancias de plantilla de función 'std::tuple<int,float>::tuple<std::_Exact_args_t,float&,_Ty,0>(_Tag,_This2,_Ty &&)' que se está compilando
+          with
+          [
+              _Ty=int,
+              _Tag=std::_Exact_args_t,
+              _This2=float &
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\tuple(357): note: vea la referencia a la creación de instancias de plantilla de función 'std::tuple<int,float>::tuple<std::_Exact_args_t,float&,_Ty,0>(_Tag,_This2,_Ty &&)' que se está compilando
+          with
+          [
+              _Ty=int,
+              _Tag=std::_Exact_args_t,
+              _This2=float &
+          ]
+  main.cpp
+c:\users\danib\source\repos\laboratori-de-programacio\proyecto\proyectocoord\proyectocoord\matriusparse.h(19): warning C4267: 'return': conversión de 'size_t' a 'int'; posible pérdida de datos
+c:\users\danib\source\repos\laboratori-de-programacio\proyecto\proyectocoord\proyectocoord\matriusparse.h(20): warning C4267: 'return': conversión de 'size_t' a 'int'; posible pérdida de datos
+c:\users\danib\source\repos\laboratori-de-programacio\proyecto\proyectocoord\proyectocoord\main.cpp(21): warning C4267: '=': conversión de 'size_t' a 'int'; posible pérdida de datos
+c:\users\danib\source\repos\laboratori-de-programacio\proyecto\proyectocoord\proyectocoord\main.cpp(24): warning C4267: '=': conversión de 'size_t' a 'int'; posible pérdida de datos
+  Generando código...
+  ProyectoCoord.vcxproj -> C:\Users\danib\Source\Repos\laboratori-de-programacio\Proyecto\ProyectoCoord\x64\Debug\ProyectoCoord.exe
