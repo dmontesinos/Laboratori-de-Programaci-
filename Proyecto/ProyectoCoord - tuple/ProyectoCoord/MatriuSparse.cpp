@@ -106,7 +106,7 @@ vector<float>& MatriuSparse::operator*(const vector<float> v1)
 	int fila = get<0>(*it);
 	float sumatorio = 0;
 
-	while (it != m_coordenadas.end())
+	/*while (it != m_coordenadas.end())
 	{
 		if (get<0>(*it) == fila)
 		{
@@ -116,10 +116,11 @@ vector<float>& MatriuSparse::operator*(const vector<float> v1)
 			aux[fila] = sumatorio;
 			sumatorio = 0;
 			fila = get<0>(*it);
-			aux[fila] += v1[get<1>(*it)] * get<2>(*it);
+			//aux[fila] += v1[get<1>(*it)] * get<2>(*it);
+			//aux[fila] += get<2>(*it);
 		}
 		it++;
-	}
+	}*/
 	return aux;
 }
 

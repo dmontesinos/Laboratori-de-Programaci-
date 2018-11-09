@@ -16,8 +16,8 @@ public:
 
 	void setVal(int fila, int columna, float valor);
 	bool getVal(int fila, int columna, float &valor);
-	int getNFiles() { return m_dimension; };
-	int getNColumnes() { return m_dimension; };
+	int getNFiles() { return m_coordenadas.size(); };
+	int getNColumnes() { return m_coordenadas.size(); };
 	void init(int filas, int columnas);
 
 	MatriuSparse& operator=(const MatriuSparse& c);
