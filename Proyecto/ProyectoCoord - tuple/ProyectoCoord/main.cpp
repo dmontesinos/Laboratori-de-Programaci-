@@ -209,7 +209,6 @@ int main()
 
 			cout << "Comment :=>> ==========================================" << endl;
 			cout << "Comment :=>> VALIDANT * per float......................" << endl;
-
 			MatriuSparse mProdX1 = m1 * 6;
 			ofstream fProdX1("MatProdX1COORD.txt", ios::out);
 			fProdX1 << mProdX1;
@@ -247,7 +246,7 @@ int main()
 			vector<float> v;
 			v.resize(m1.getNFiles(), 1);
 
-			/*vector<float> v2 = m1*v;
+			vector<float> v2 = m1*v;
 			ofstream fProdVX1("VectProdX1COORD.txt", ios::out);
 			for (int i = 0; i < v2.size(); i++)
 			{
@@ -271,7 +270,7 @@ int main()
 				cout << "Comment :=>> Final del test XARXA1 sense errors" << endl;
 			if (grade < 0)
 				grade = 0;
-			cout << endl << "Comment :=>> Grade : " << grade << endl;*/
+			cout << endl << "Comment :=>> Grade : " << grade << endl;
 
 
 			cout << "Comment :=>> ==========================================" << endl;
@@ -323,7 +322,7 @@ int main()
 				}
 				else
 				{
-					cout << "Comment :=>>OK EXISTEIX VAL(3,2): Pero ERROR val " << valor << " Valor correcte 1" << endl;
+					cout << "Comment :=>>OK EXISTEIX VAL(3,2): Pero ERROR val " << valor << " Valor correcte 0" << endl;
 					valid = false;
 				}
 			else
@@ -449,7 +448,6 @@ int main()
 			vector<float> vSubEpiOrdenat;
 			vSubEpiOrdenat.resize(m2.getNFiles(), 1);
 
-			//FALLA AQUI
 			vector<float> v2SubEpiOrdenat = m2*vSubEpiOrdenat;
 
 			ofstream fProdVSubEpiOrdenat("VectProdSubEpi2OrdenatCOORD.txt", ios::out);
@@ -655,7 +653,7 @@ int main()
 			vector<float> vEpiOrdenat;
 			vEpiOrdenat.resize(m3.getNFiles(), 1);
 
-			/*vector<float> v2EpiOrdenat = m3*vEpiOrdenat;
+			vector<float> v2EpiOrdenat = m3*vEpiOrdenat;
 			ofstream fProdVEpiOrdenat("VectProdEpiOrdenatCOORD.txt", ios::out);
 			for (int i = 0; i < v2EpiOrdenat.size(); i++)
 			{
@@ -674,7 +672,7 @@ int main()
 			{
 				cout << "Comment :=>> ERROR (EpiOrdenat*vector) ....................... " << endl;
 				valid = false;
-			}*/
+			}
 
 		if (valid)
 			cout << "Comment :=>> Final del test sense errors" << endl;
@@ -694,6 +692,6 @@ int main()
 	{
 		cout << msg << endl;
 	}
-	system("pause");
+
 }
 

@@ -16,12 +16,11 @@ public:
 
 	void setVal(int fila, int columna, float valor);
 	bool getVal(int fila, int columna, float &valor);
-	int getNFiles() { return m_coordenadas.size(); };
-	int getNColumnes() { return m_coordenadas.size(); };
+	int getNFiles() { return m_dimension; };
+	int getNColumnes() { return m_dimension; };
 	void init(int filas, int columnas);
 
 	MatriuSparse& operator=(const MatriuSparse& c);
-	vector<float>& operator=(const vector<float>& v);
 	friend ostream& operator<<(ostream& out, const MatriuSparse& r);
 
 	MatriuSparse& operator*(const int valor);

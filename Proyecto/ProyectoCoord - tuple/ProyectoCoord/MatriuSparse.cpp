@@ -36,7 +36,7 @@ MatriuSparse::MatriuSparse(const string &nombreFichero)
 
 		m_dimension = max + 1;
 
-		sort(m_coordenadas.begin(), m_coordenadas.end(), [](tuple<int, int, float> const& A, tuple<int, int, float> const& B)
+		/*sort(m_coordenadas.begin(), m_coordenadas.end(), [](tuple<int, int, float> const& A, tuple<int, int, float> const& B)
 		{
 			if (get<0>(A) < get<0>(B)) return true;
 			if (get<0>(B) < get<0>(A)) return false;
@@ -48,7 +48,7 @@ MatriuSparse::MatriuSparse(const string &nombreFichero)
 			if (get<2>(B) < get<2>(A)) return false;
 
 			return false;
-		});
+		});*/
 	}
 		
 	else {
@@ -81,12 +81,6 @@ MatriuSparse& MatriuSparse::operator=(const MatriuSparse& c)
 	return *this;
 }
 
-vector<float>& MatriuSparse::operator=(const vector<float>& v)
-{
-	vector<float> aux = v;
-	return aux;
-}
-
 
 MatriuSparse& MatriuSparse::operator*(const int valor)
 {
@@ -100,27 +94,25 @@ MatriuSparse& MatriuSparse::operator*(const int valor)
 
 vector<float>& MatriuSparse::operator*(const vector<float> v1)
 {
-	vector<float> aux(v1.size(),0);
-
+	vector<float> aux(v1.size(), 0);
+	float sumatorio = 0;
 	auto it = m_coordenadas.begin();
 	int fila = get<0>(*it);
-	float sumatorio = 0;
 
-	/*while (it != m_coordenadas.end())
+	while (it != m_coordenadas.end())
 	{
-		if (get<0>(*it) == fila)
+		if (fila == get<0>(*it))
 		{
-			sumatorio += v1[get<1>(*it)] * get<2>(*it);
+			sumatorio += get<2>(*it) * v1[get<1>(*it)];
 		}
 		else {
-			aux[fila] = sumatorio;
+			aux[get<0>(*it)] = sumatorio;
 			sumatorio = 0;
 			fila = get<0>(*it);
-			//aux[fila] += v1[get<1>(*it)] * get<2>(*it);
-			//aux[fila] += get<2>(*it);
+			sumatorio += get<2>(*it) * v1[get<1>(*it)];
 		}
 		it++;
-	}*/
+	}
 	return aux;
 }
 
@@ -160,16 +152,13 @@ void MatriuSparse::setVal(int fila, int columna, float valor)
 		if (it2 != m_coordenadas.end()) {
 			if (get<0>(*it) == fila) {
 				if (columna == get<1>(*it)) {
-					if (valor == get<2>(*it)) //Ya existe
-					{
-						encontrado = true;
-						incrementar = false;
-					}
-					else if (valor > get<2>(*it) && valor < get<2>(*it2)) {
-						m_coordenadas.insert(it2, tuple<int, int, float>(fila, columna, valor));
-						encontrado = true;
-						incrementar = false;
-					}
+					get<2>(*it) = valor;
+					encontrado = true;
+					incrementar = false;
+				} else if (valor > get<2>(*it) && valor < get<2>(*it2)) {
+					m_coordenadas.insert(it2, tuple<int, int, float>(fila, columna, valor));
+					encontrado = true;
+					incrementar = false;
 				}
 				else if (columna > get<1>(*it) && columna < get<1>(*it2))
 				{
@@ -207,6 +196,19 @@ void MatriuSparse::setVal(int fila, int columna, float valor)
 			encontrado = true;
 		}
 	}
+	sort(m_coordenadas.begin(), m_coordenadas.end(), [](tuple<int, int, float> const& A, tuple<int, int, float> const& B)
+	{
+		if (get<0>(A) < get<0>(B)) return true;
+		if (get<0>(B) < get<0>(A)) return false;
+
+		if (get<1>(A) < get<1>(B)) return true;
+		if (get<1>(B) < get<1>(A)) return false;
+
+		if (get<2>(A) < get<2>(B)) return true;
+		if (get<2>(B) < get<2>(A)) return false;
+
+		return false;
+	});
 }
 
 bool MatriuSparse::getVal(int fila, int columna, float &valor)
