@@ -82,19 +82,24 @@ MatriuSparse& MatriuSparse::operator=(const MatriuSparse& c)
 }
 
 
-MatriuSparse& MatriuSparse::operator*(const int valor)
+MatriuSparse& MatriuSparse::operator*(int valor)
 {
+	MatriuSparse *aux = new MatriuSparse;
+	(*aux).m_dimension = m_dimension;
+
 	for (auto it = m_coordenadas.begin(); it != m_coordenadas.end(); it++)
 	{
-		get<2>(*it) *= valor;
-	}
+		(*aux).m_coordenadas.push_back(tuple<int, int, float>(get<0>(*it), get<1>(*it), get<2>(*it)*valor));
 
-	return *this;
+		//get<2>(*it) *= valor;
+	}
+	return *aux;
 }
 
-vector<float>& MatriuSparse::operator*(const vector<float> v1)
+vector<float>& MatriuSparse::operator*(vector<float> &v1)
 {
 	vector<float> aux(v1.size(), 0);
+
 	float sumatorio = 0;
 	auto it = m_coordenadas.begin();
 	int fila = get<0>(*it);
@@ -106,24 +111,33 @@ vector<float>& MatriuSparse::operator*(const vector<float> v1)
 			sumatorio += get<2>(*it) * v1[get<1>(*it)];
 		}
 		else {
-			aux[get<0>(*it)] = sumatorio;
+			aux[fila] = sumatorio;
 			sumatorio = 0;
 			fila = get<0>(*it);
 			sumatorio += get<2>(*it) * v1[get<1>(*it)];
 		}
+		if (it == m_coordenadas.end()-1)
+			aux[get<0>(*it)] = sumatorio;
+
 		it++;
 	}
-	return aux;
+	v1 = aux;
+	return v1;
 }
 
 MatriuSparse & MatriuSparse::operator/(const int valor)
 {
+	MatriuSparse *aux = new MatriuSparse;
+	(*aux).m_dimension = m_dimension;
+
 	for (auto it = m_coordenadas.begin(); it != m_coordenadas.end(); it++)
 	{
-		get<2>(*it) /= valor;
+		(*aux).m_coordenadas.push_back(tuple<int, int, float>(get<0>(*it), get<1>(*it), get<2>(*it)/valor));
+
+		//get<2>(*it) /= valor;
 	}
 
-	return *this;
+	return *aux;
 }
 
 void MatriuSparse::init(int filas, int columnas)

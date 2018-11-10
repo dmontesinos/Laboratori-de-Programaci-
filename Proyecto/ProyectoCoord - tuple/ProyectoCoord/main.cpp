@@ -209,6 +209,7 @@ int main()
 
 			cout << "Comment :=>> ==========================================" << endl;
 			cout << "Comment :=>> VALIDANT * per float......................" << endl;
+
 			MatriuSparse mProdX1 = m1 * 6;
 			ofstream fProdX1("MatProdX1COORD.txt", ios::out);
 			fProdX1 << mProdX1;
@@ -322,7 +323,7 @@ int main()
 				}
 				else
 				{
-					cout << "Comment :=>>OK EXISTEIX VAL(3,2): Pero ERROR val " << valor << " Valor correcte 0" << endl;
+					cout << "Comment :=>>OK EXISTEIX VAL(3,2): Pero ERROR val " << valor << " Valor correcte 1" << endl;
 					valid = false;
 				}
 			else
@@ -692,6 +693,6 @@ int main()
 	{
 		cout << msg << endl;
 	}
-
+	system("pause");
 }
 

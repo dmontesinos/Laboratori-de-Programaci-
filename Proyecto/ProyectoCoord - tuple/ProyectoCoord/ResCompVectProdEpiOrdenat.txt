@@ -1,2 +1,0 @@
-Error num 1 a linia 1
-Fitxer VectProdEpiOrdenatCOORD.txt es mes curt que VectProdEpiOrdenatCOORDEsperat.txt

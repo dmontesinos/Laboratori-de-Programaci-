@@ -21,10 +21,11 @@ public:
 	void init(int filas, int columnas);
 
 	MatriuSparse& operator=(const MatriuSparse& c);
+
 	friend ostream& operator<<(ostream& out, const MatriuSparse& r);
 
-	MatriuSparse& operator*(const int valor);
-	vector<float>& operator*(const vector<float> v1);
+	MatriuSparse& operator*(int valor);
+	vector<float>& operator*(vector<float> &v1);
 
 	MatriuSparse& operator/(const int valor);
 
