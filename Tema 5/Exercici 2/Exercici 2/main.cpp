@@ -78,6 +78,7 @@ float testGrafNoDirigit()
 	vector<string> nodes;
 	nodes.resize(numNodes);
 	nodes = { "Tasca 1","Tasca 2","Tasca 3","Tasca 4","Tasca 5","Tasca 6","Tasca 7","Tasca 8","Tasca 9","Tasca 10","Tasca 11" };
+	//nodes = { "Tasca 0","Tasca 1","Tasca 2","Tasca 3","Tasca 4","Tasca 5","Tasca 6","Tasca 7","Tasca 8","Tasca 9","Tasca 10" };
 
 	vector<vector<int>> arestes;
 	arestes = { { 0,1 },{ 0,2 },{ 3,0 },{ 2,1 },{ 2,3 },{ 4,1 },{ 1,5 },{ 3,5 },{ 6,3 },{ 5,4 },{ 5,6 },{ 4,7 },{ 6,9 },{ 7,8 },{ 7,10 }};
@@ -460,5 +461,6 @@ int main()
 	if (grade == 10.0)
 		cout << "Comment :=>> Final del test sense errors" << endl;
 	cout << "Grade :=>> " << grade << endl;
+	system("pause");
 	return 0;
 }

@@ -1,0 +1,6 @@
+﻿  GrafList.cpp
+c:\users\danib\desktop\laboratori de programació\tema 5\exercici 2\exercici 2\graflist.cpp(38): warning C4018: '<': no coinciden signed/unsigned
+c:\users\danib\desktop\laboratori de programació\tema 5\exercici 2\exercici 2\graflist.cpp(63): warning C4018: '<': no coinciden signed/unsigned
+c:\users\danib\desktop\laboratori de programació\tema 5\exercici 2\exercici 2\graflist.cpp(151): warning C4018: '<': no coinciden signed/unsigned
+c:\users\danib\desktop\laboratori de programació\tema 5\exercici 2\exercici 2\graflist.cpp(169): warning C4018: '<': no coinciden signed/unsigned
+  Exercici 2.vcxproj -> C:\Users\danib\Desktop\Laboratori de Programació\Tema 5\Exercici 2\Debug\Exercici 2.exe

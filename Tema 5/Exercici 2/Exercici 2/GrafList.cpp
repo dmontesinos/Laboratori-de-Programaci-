@@ -158,7 +158,40 @@ void Graf::eliminarNode(string node)
 
 vector<vector<string>> Graf::cicles()
 {
-	vector<vector<int>>& parades_cicles;
+	vector<vector<string>> parades_cicles;
+	vector<string> temporal;
+
+	list<pair<int, int>>::iterator it;
+	list<pair<int, int>>::iterator it2;
+	list<pair<int, int>>::iterator it3;
+
+
+	for (int i = 0; i < m_veins.size(); i++)
+	{
+		for (it = m_veins[i].begin(); it != m_veins[i].end(); it++)
+		{
+			for (it2 = m_veins[(*it).first].begin(); it2 != m_veins[(*it).first].end(); it2++)
+			{
+				for (it3 = m_veins[(*it2).first].begin(); it3 != m_veins[(*it2).first].end(); it3++)
+				{
+					if (m_nodes[i] != m_nodes[(*it2).first] && m_nodes[(*it2).first] != m_nodes[(*it3).first] && m_nodes[(*it3).first] == m_nodes[i])
+					{
+						temporal.push_back(m_nodes[i]);
+						temporal.push_back(m_nodes[(*it).first]);
+						temporal.push_back(m_nodes[(*it2).first]);
+						parades_cicles.push_back(temporal);
+						temporal.resize(0);
+					}
+				}
+			}
+		}
+	}
+	return parades_cicles;
+}
+
+/*vector<vector<string>> Graf::cicles()
+{
+	/*vector<vector<int>>& parades_cicles;
 	for (int fila = 0; fila < m_numNodes; fila++) {
 		for (int col = fila; col < m_numNodes; col++) {
 			if (m_matriuAdj[fila][col] == 1) {
@@ -171,14 +204,48 @@ vector<vector<string>> Graf::cicles()
 		}
 	}
 	return parades_cicles;
-}
+	vector<vector<string>> prueba;
+	return prueba;
+}*/
 
 int Graf::grauOutNode(string node)
 {
+	/*int grau = 0;
+	vector<string>::iterator it;
+
+	it = find(m_nodes.begin(), m_nodes.end(), node);
+
+	if (it != m_nodes.end())
+	{
+		int pos = distance(m_nodes.begin(), it);
+		for (int i = 0; i < m_numNodes; i++)
+		{
+			if (m_matriuAdj[pos][i] != 0)
+				grau++;
+		}
+	}
+	return grau;*/
+	return 0;
 }
 
 int Graf::grauInNode(string node)
 {
+	/*int grau = 0;
+	vector<string>::iterator it;
+
+	it = find(m_nodes.begin(), m_nodes.end(), node);
+
+	if (it != m_nodes.end())
+	{
+		int pos = distance(m_nodes.begin(), it);
+		for (int i = 0; i < m_numNodes; i++)
+		{
+			if (m_matriuAdj[i][pos] != 0)
+				grau++;
+		}
+	}
+	return grau;*/
+	return 0;
 }
 
 
