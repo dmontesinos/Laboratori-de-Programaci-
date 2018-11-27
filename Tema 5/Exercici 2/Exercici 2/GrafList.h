@@ -27,7 +27,7 @@ public:
 	int grauOutNode(string node);
 	int grauInNode(string node);
 	void camins(string node1, string node2, vector<list<string>>& camins);
-	
+	bool comparaSiExisteix(vector<string> temporal, vector<vector<string>>& parades_cicles);
 	void mostra();
 
 private:

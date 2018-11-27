@@ -155,6 +155,27 @@ void Graf::eliminarNode(string node)
 		m_numNodes--;
 	}	
 }
+bool Graf::comparaSiExisteix(vector<string> temporal, vector<vector<string>>& parades_cicles)
+{
+	
+	bool encontrado = false;
+
+	for (int i = 0; !encontrado && i < parades_cicles.size(); i++)
+	{
+		int contador = 0;
+		for (auto it = parades_cicles[i].begin(); !encontrado && it != parades_cicles[i].end(); it++)
+		{
+			if (temporal[0] == *it || temporal[1] == *it || temporal[2] == *it)
+				contador++;
+
+			if (contador == 3)
+			{
+				encontrado = true;
+			}
+		}
+	}
+	return encontrado;
+}
 
 vector<vector<string>> Graf::cicles()
 {
@@ -179,7 +200,12 @@ vector<vector<string>> Graf::cicles()
 						temporal.push_back(m_nodes[i]);
 						temporal.push_back(m_nodes[(*it).first]);
 						temporal.push_back(m_nodes[(*it2).first]);
-						parades_cicles.push_back(temporal);
+
+						if (!(comparaSiExisteix(temporal, parades_cicles)))
+						{
+							parades_cicles.push_back(temporal);
+						}
+
 						temporal.resize(0);
 					}
 				}
@@ -210,42 +236,53 @@ vector<vector<string>> Graf::cicles()
 
 int Graf::grauOutNode(string node)
 {
-	/*int grau = 0;
-	vector<string>::iterator it;
+	int posicion;
+	bool encontrado = false;
+	int contador = 0;
 
-	it = find(m_nodes.begin(), m_nodes.end(), node);
-
-	if (it != m_nodes.end())
+	for (int i = 0; !encontrado && i < m_nodes.size(); i++)
 	{
-		int pos = distance(m_nodes.begin(), it);
-		for (int i = 0; i < m_numNodes; i++)
+		if (m_nodes[i] == node)
 		{
-			if (m_matriuAdj[pos][i] != 0)
-				grau++;
+			posicion = i;
+			encontrado = true;
 		}
 	}
-	return grau;*/
-	return 0;
+
+	for (auto it = m_veins[posicion].begin(); it != m_veins[posicion].end(); it++)
+	{
+		contador++;
+	}
+
+	return contador;
 }
 
 int Graf::grauInNode(string node)
 {
-	/*int grau = 0;
-	vector<string>::iterator it;
+	int posicion;
+	bool encontrado = false;
+	int contador = 0;
 
-	it = find(m_nodes.begin(), m_nodes.end(), node);
-
-	if (it != m_nodes.end())
+	for (int i = 0; !encontrado && i < m_nodes.size(); i++)
 	{
-		int pos = distance(m_nodes.begin(), it);
-		for (int i = 0; i < m_numNodes; i++)
+		if (m_nodes[i] == node)
 		{
-			if (m_matriuAdj[i][pos] != 0)
-				grau++;
+			posicion = i;
+			encontrado = true;
 		}
 	}
-	return grau;*/
-	return 0;
+
+	for (int i = 0; i < m_nodes.size(); i++)
+	{
+		for (auto it = m_veins[i].begin(); it != m_veins[i].end(); it++)
+		{
+			if ((*it).first == posicion)
+			{
+				contador++;
+			}
+		}
+	}
+	return contador;
 }
 
 
