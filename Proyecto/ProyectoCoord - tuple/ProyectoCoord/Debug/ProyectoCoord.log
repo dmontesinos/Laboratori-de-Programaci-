@@ -1,6 +1,0 @@
-﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: El directorio intermedio (Debug\) contiene archivos compartidos de otro proyecto (ProyectoCoord.vcxproj). Esto puede dar lugar a un comportamiento incorrecto de limpieza y recompilación.
-  main.cpp
-c:\users\danib\desktop\laboratori de programació\proyecto\proyectocoord - tuple\proyectocoord\main.cpp(252): warning C4018: '<': no coinciden signed/unsigned
-c:\users\danib\desktop\laboratori de programació\proyecto\proyectocoord - tuple\proyectocoord\main.cpp(455): warning C4018: '<': no coinciden signed/unsigned
-c:\users\danib\desktop\laboratori de programació\proyecto\proyectocoord - tuple\proyectocoord\main.cpp(659): warning C4018: '<': no coinciden signed/unsigned
-  ProyectoCoord.vcxproj -> C:\Users\danib\Desktop\Laboratori de Programació\Proyecto\ProyectoCoord - tuple\Debug\ProyectoCoord-Tuple.exe

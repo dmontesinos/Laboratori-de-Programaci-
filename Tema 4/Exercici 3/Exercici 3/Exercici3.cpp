@@ -4,18 +4,15 @@
 using namespace std;
 
 
-int MaxElsRec(list<int>& l, list<int>::iterator it)
+int MaxElsRec(list<int>& l, list<int>::iterator it, int &max)
 {
-	int max = 0;
-
 	if (it != l.end())
 	{
 		if (*it > max)
 		{
 			max = *it;
-			MaxElsRec(l, ++it);
 		}
-		return max;
+		return MaxElsRec(l, ++it, max);
 	}
 	else {
 		return max;
@@ -25,7 +22,8 @@ int MaxElsRec(list<int>& l, list<int>::iterator it)
 int MaxElementsLlista(list<int>& l)
 {
 	cout << "El maximo de la lista es: " << endl;
-	int maximo = MaxElsRec(l, l.begin());
+	int max = 0;
+	int maximo = MaxElsRec(l, l.begin(), max);
 	return maximo;
 	system("pause");
 }

@@ -1,0 +1,7 @@
+﻿  main.cpp
+c:\users\danib\desktop\laboratori de programació\tema 6\exercici 3\exercici 3\exercici 3\main.cpp(112): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\danib\desktop\laboratori de programació\tema 6\exercici 3\exercici 3\exercici 3\main.cpp(148): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\danib\desktop\laboratori de programació\tema 6\exercici 3\exercici 3\exercici 3\main.cpp(212): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\danib\desktop\laboratori de programació\tema 6\exercici 3\exercici 3\exercici 3\map.h(42): warning C4717: 'operator<<': recursiva para todas las rutas de acceso de control; la función provocará el desbordamiento de la pila en tiempo de ejecución
+c:\users\danib\desktop\laboratori de programació\tema 6\exercici 3\exercici 3\exercici 3\map.h(42): error C4716: 'operator<<': debe devolver un valor
+c:\users\danib\desktop\laboratori de programació\tema 6\exercici 3\exercici 3\exercici 3\map.h(71): warning C4172: devolución de dirección de la variable local o temporal: vDefecto

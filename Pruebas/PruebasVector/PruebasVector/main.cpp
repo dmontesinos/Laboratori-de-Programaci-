@@ -4,6 +4,7 @@
 #include <utility>
 #include <algorithm>
 #include <unordered_map>
+#include <map>
 
 using namespace std;
 
@@ -104,7 +105,7 @@ int main()
 	cout << (*it).first << " " << (*it).second << endl;
 	*/
 
-	vector<tuple<int, int, float>> m_vector;
+	/*vector<tuple<int, int, float>> m_vector;
 	m_vector.push_back(tuple<int,int,float>(25, 30, 35));
 	m_vector.push_back(tuple<int, int, float>(50, 60, 70));
 	m_vector.push_back(tuple<int, int, float>(51, 61, 71.5));
@@ -112,7 +113,7 @@ int main()
 	for (auto it = m_vector.begin(); it != m_vector.end(); it++)
 	{
 		cout << get<0>(*it) << " " << get<1>(*it) << " " << get<2>(*it) << endl;
-	}
+	}*/
 	
 
 
@@ -140,6 +141,26 @@ int main()
 		cout << " - El mas grande es: " << max << endl;
 	}
 	*/
+
+map<pair<int, int>, double> prueba;
+
+prueba[make_pair(0, 0)] = 5.69696;
+
+prueba[make_pair(0, 1)] = 3.57778;
+
+for (auto it = prueba.begin(); it != prueba.end(); it++)
+{
+	cout << (*it).first.first << endl;
+	cout << (*it).first.second << endl;
+	cout << (*it).second << endl;
+}
+
+vector<map<pair<int, int>, double>> m_deltaQ;
+/*for (auto it = m_deltaQ.begin(); it != m_deltaQ.end(); it++)
+{
+	(*it)[make_pair(0, 0)] = 43434.43434;
+}*/
+
 
 	return 0;
 }
