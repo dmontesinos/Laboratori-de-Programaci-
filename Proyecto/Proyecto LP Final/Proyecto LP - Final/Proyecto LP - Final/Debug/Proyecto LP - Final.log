@@ -1,0 +1,8 @@
+﻿  Comunitat.cpp
+c:\users\danib\desktop\laboratori de programació\proyecto\proyecto lp final\proyecto lp - final\proyecto lp - final\comunitat.cpp(34): warning C4018: '<': no coinciden signed/unsigned
+c:\users\danib\desktop\laboratori de programació\proyecto\proyecto lp final\proyecto lp - final\proyecto lp - final\comunitat.cpp(45): warning C4018: '<': no coinciden signed/unsigned
+c:\users\danib\desktop\laboratori de programació\proyecto\proyecto lp final\proyecto lp - final\proyecto lp - final\comunitat.cpp(65): warning C4018: '<': no coinciden signed/unsigned
+c:\users\danib\desktop\laboratori de programació\proyecto\proyecto lp final\proyecto lp - final\proyecto lp - final\comunitat.cpp(100): warning C4018: '<': no coinciden signed/unsigned
+c:\users\danib\desktop\laboratori de programació\proyecto\proyecto lp final\proyecto lp - final\proyecto lp - final\comunitat.cpp(61): warning C4101: 'valorMax': variable local sin referencia
+c:\users\danib\desktop\laboratori de programació\proyecto\proyecto lp final\proyecto lp - final\proyecto lp - final\comunitat.cpp(73): warning C4101: 'd': variable local sin referencia
+  Proyecto LP - Final.vcxproj -> C:\Users\danib\Desktop\Laboratori de Programació\Proyecto\Proyecto LP Final\Proyecto LP - Final\Debug\Proyecto LP - Final.exe
